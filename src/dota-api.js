@@ -1,5 +1,5 @@
 const {responseHandler, handleQueryParams} = require('./utils')
-const {BASE_URL, DOTA_ECON, DOTA_MATCHES} = require('./constants')
+const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN} = require('./constants')
 
 class dotaSteamApi {
     constructor(steamApiKey) {
@@ -13,7 +13,7 @@ class dotaSteamApi {
             match_id
         }
         try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + '/GetMatchDetails/v1?' + handleQueryParams(query_params))
+            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetMatchDetails/v1?' + handleQueryParams(query_params))
                 return responseHandler(response);
         }
         catch (e) {
@@ -30,7 +30,7 @@ class dotaSteamApi {
             language
         }
         try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + '/GetLeagueListing/v1/?' + handleQueryParams(query_params));
+            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetLeagueListing/v1/?' + handleQueryParams(query_params));
                 return responseHandler(response);
         }
         catch (e) {
@@ -207,4 +207,54 @@ class dotaSteamApi {
             return e;
         }
     }
+
+    // Econ Dota 2
+    getGameItems(language) {
+        query_params = {
+            key: this.apiKey,
+            language
+        }
+
+        return fetch(BASE_URL + DOTA_ECON + 'GetGameItems/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    getHeroes(language) {
+        query_params = {
+            key: this.apiKey,
+            language
+        }
+
+        return fetch(BASE_URL + DOTA_ECON + 'GetHeroes/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    getTournamentPrizePool(leagueid) {
+        query_params = {
+            key: this.apiKey,
+            leagueid
+        }
+
+        return fetch(BASE_URL + DOTA_ECON + 'GetTournamentPrizePool/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    getRarities(language) {
+        query_params = {
+            key: this.apiKey,
+            language
+        }
+
+        return fetch(BASE_URL + DOTA_ECON + 'GetRarities/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // for grabbing image urls
+    
 }
+
+module.exports = dotaSteamApi
