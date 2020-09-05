@@ -254,7 +254,34 @@ class dotaSteamApi {
     }
 
     // for grabbing image urls
-    
+
+    // getting hero icon with desired size
+    getHeroIcon(heroName, size) {
+        try {
+            const sizes = ['sb.png', 'lg.png', 'full.png', 'vert.jpg'];
+            if (size < 0 || size >= sizes.length) {
+                throw new Error("Error: Please enter valid size")
+            }
+            const imgSize = sizes[Number(size)]
+            const name = heroName.replace(/npc_dota_hero_/gi, '') + '_';
+            return BASE_CDN + `heroes/${name}${imgSize}`;
+        } catch(e) {
+            return e;
+        }
+    }
+
+    // getting item icon
+    getItemIcon(itemName) {
+        const name = itemName.replace('/item_/gi', '') + '_';
+        return BASE_CDN + `items/${name}lg.png`
+    }
+
+    // valve currrently offers no known endpoint to get ability ids and names
+    // user will have to know the correct name of the desired ability
+    getAbilityIcon(heroName, abilityName) {
+        const name = heroName.replace(/npc_dota_hero_/gi, '') + '_';
+        return BASE_CDN + `abilities/${name}${abilityName}_lg.png`
+    }
 }
 
 module.exports = dotaSteamApi
