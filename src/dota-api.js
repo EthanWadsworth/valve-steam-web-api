@@ -1,5 +1,5 @@
 const {responseHandler, handleQueryParams} = require('./utils')
-const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN, DOTA_VERSION, DOTA_STORE_ECON} = require('./constants')
+const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN, DOTA_VERSION, DOTA_STORE_ECON, STEAM_USER_STATS} = require('./constants')
 
 class dotaSteamApi {
     constructor(steamApiKey) {
@@ -391,6 +391,76 @@ class dotaSteamApi {
         }
 
         return fetch(BASE_URL + 'IDOTA2MatchStats_570/GetRealtimeStats/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // get dota 2 news according to filter parameters
+    getNewsForDotaApp(maxlength, enddate, count, feeds, appid=570) {
+        query_params = {
+            key: this.apiKey,
+            appid,
+            maxlength,
+            enddate,
+            count,
+            feeds
+        }
+
+        return fetch(BASE_URL + 'ISteamNews/GetNewsForApp/v2/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // getting steam user and playerbase dota 2 global stats
+
+    // dota 2 does not currently have any achievements, but it if ever does, use these methods
+
+    // returns percentage of global playerbase that has earned each ingame achievement
+    getGlobalAchievementPercentagesForDota(gameid) {
+        query_params = {
+            key: this.apiKey,
+            gameid
+        }
+
+        return fetch(BASE_URL + STEAM_USER_STATS + 'GetGlobalAchievementPercentagesForApp/v2/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // grab individual steam user achievements for dota
+    // steam profile must be of public status
+    getDotaPlayerAchievements(steamid, appid, language) {
+        query_params = {
+            key: this.apiKey,
+            steamid,
+            appid,
+            l: language
+        }
+
+        return fetch(BASE_URL + STEAM_USER_STATS + 'GetPlayerAchievements/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // returns game name, version, and ingame stats tracked, dota has none as of now
+    getSchemaForDota(language, appid=570) {
+        query_params = {
+            key: this.apiKey,
+            l: language,
+            appid
+        }
+        return fetch(BASE_URL + STEAM_USER_STATS + 'GetSchemaForGame/v2/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // returns number of current ingame players
+    getNumberOfCurrentPlayers(appid=570) {
+        query_params = {
+            key: this.apiKey,
+            appid
+        }
+        return fetch(BASE_URL + STEAM_USER_STATS + 'GetNumberOfCurrentPlayers/v1/?' + handleQueryParams(query_params))
         .then(response => responseHandler(response))
         .catch(e => e)
     }
