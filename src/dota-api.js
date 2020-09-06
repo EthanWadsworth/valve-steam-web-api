@@ -272,7 +272,7 @@ class dotaSteamApi {
 
     // getting item icon
     getItemIcon(itemName) {
-        const name = itemName.replace('/item_/gi', '') + '_';
+        const name = itemName.replace(/item_/gi, '') + '_';
         return BASE_CDN + `items/${name}lg.png`
     }
 
@@ -282,6 +282,45 @@ class dotaSteamApi {
         const name = heroName.replace(/npc_dota_hero_/gi, '') + '_';
         return BASE_CDN + `abilities/${name}${abilityName}_lg.png`
     }
+
+    // check for error handling from getHeroIcon
+    // returns promise with list of heroes with hero icon urls attached 
+    getHeroesWithIcons(language, size) {
+        this.getHeroes(language)
+        .then(heroData => {
+            heroData.result.heroes.forEach(hero => {
+                hero['heroIcon'] = this.getHeroIcon(hero.name, size)
+            })
+            return new Promise(function(resolve, reject) {
+                if(heroData.result.heroes[0]['heroIcon']) {
+                    resolve(heroData)
+                } else {
+                    reject(Error("Error: Failed to add hero icon urls"))
+                }
+            })
+        })
+        .catch(e => e)
+    }
+
+    // returns promise with list of items with item icon urls attached to each object
+    getItemsWithIcons(language) {
+        this.getGameItems(language)
+        .then(itemData => {
+            itemData.result.items.forEach(item => {
+                item['icon'] = this.getItemIcon(item.name)
+            })
+            return new Promise(function(resolve, reject) {
+                if(itemData.result.items[0]['icon']) {
+                    resolve(itemData)
+                } else {
+                    reject(Error("Error: Failed to add item icon urls"))
+                }
+            })
+        })
+        .catch(e => e)
+    }
 }
+
+
 
 module.exports = dotaSteamApi
