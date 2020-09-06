@@ -1,5 +1,5 @@
 const {responseHandler, handleQueryParams} = require('./utils')
-const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN} = require('./constants')
+const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN, DOTA_VERSION} = require('./constants')
 
 class dotaSteamApi {
     constructor(steamApiKey) {
@@ -317,6 +317,30 @@ class dotaSteamApi {
                 }
             })
         })
+        .catch(e => e)
+    }
+
+    // methods for dota 2 client and dota 2 server versions
+
+    // for getting dota 2 client version
+    getClientVersion() {
+        query_params = {
+            key: this.apiKey
+        }
+
+        return fetch(BASE_URL + DOTA_VERSION + 'GetClientVersion/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // for getting dota 2 server version
+    getServerVersion() {
+        query_params = {
+            key: this.apiKey
+        }
+
+        return fetch(BASE_URL + DOTA_VERSION + 'GetServerVersion/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
         .catch(e => e)
     }
 }
