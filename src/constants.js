@@ -4,6 +4,7 @@ const DOTA_TYPE = "570"
 const DOTA_ECON = "IEconDOTA2_" + DOTA_TYPE + '/'
 const DOTA_VERSION = "IGCVERSION_" + DOTA_TYPE + '/'
 const DOTA_MATCHES = "IDOTA2Match_" + DOTA_TYPE + '/'
+const DOTA_STORE_ECON = "IEconItems_" + DOTA_TYPE + '/'
 const BASE_CDN = 'http://cdn.dota2.com/apps/dota2/images/'
 
 module.exports = {
@@ -11,5 +12,6 @@ module.exports = {
     DOTA_ECON,
     DOTA_MATCHES,
     BASE_CDN,
-    DOTA_VERSION
+    DOTA_VERSION,
+    DOTA_STORE_ECON
 }

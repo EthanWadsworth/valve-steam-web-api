@@ -1,5 +1,5 @@
 const {responseHandler, handleQueryParams} = require('./utils')
-const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN, DOTA_VERSION} = require('./constants')
+const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN, DOTA_VERSION, DOTA_STORE_ECON} = require('./constants')
 
 class dotaSteamApi {
     constructor(steamApiKey) {
@@ -343,8 +343,57 @@ class dotaSteamApi {
         .then(response => responseHandler(response))
         .catch(e => e)
     }
+
+    // methods related to steam users and the steam economy market store for dota 2
+
+    // returns current steam market data for the dota 2 page, including featured items and filters for each hero and category
+    getStoreMetaData(language) {
+        query_params = {
+            key: this.apiKey,
+            language
+        }
+
+        return fetch(BASE_URL + DOTA_STORE_ECON + 'GetStoreMetaData/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // get all dota 2 cosmetics currently owned by the steam user
+    getPlayerItems(steamid) {
+        query_params = {
+            key: this.apiKey,
+            steamid
+        }
+
+        return fetch(BASE_URL + DOTA_STORE_ECON +' GetPlayerItems/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // get items equipped for each hero by player
+    getEquippedPlayerItems(steamid, class_id) {
+        query_params = {
+            key: this.apiKey,
+            steamid,
+            class_id
+        }
+
+        return fetch(BASE_URL + DOTA_STORE_ECON + 'GetEquippedPlayerItems/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // return realitime stats with steam server id
+    getRealtimeStats(server_steam_id) {
+        query_params = {
+            key: this.apiKey,
+            server_steam_id
+        }
+
+        return fetch(BASE_URL + 'IDOTA2MatchStats_570/GetRealtimeStats/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
 }
-
-
 
 module.exports = dotaSteamApi
