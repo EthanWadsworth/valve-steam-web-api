@@ -1,5 +1,5 @@
 const {responseHandler, handleQueryParams} = require('./utils')
-const {BASE_URL, STEAM_USER_STATS, TF2_STORE_ECON} = require('./constants')
+const {BASE_URL, STEAM_USER_STATS, TF2_STORE_ECON, STEAM_ECONOMY} = require('./constants')
 
 class Tf2Api {
     constructor(apiKey) {
@@ -114,7 +114,70 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    
+    // returns steam market metadata for the TF2 market
+    getSteamStoreMetaData(language) {
+        query_params = {
+            key: this.apiKey,
+            language
+        }
+        return fetch(BASE_URL + TF2_STORE_ECON + 'GetStoreMetaData/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // current TF2 store status
+    // call largely undocumented - status codes unknown
+    getStoreStatus() {
+        query_params = {
+            key: this.apiKey
+        }
+        return fetch(BASE_URL + TF2_STORE_ECON + 'GetStoreStatus/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // endpoints for ISteamEconomy: involves getting cosmetic item information
+    // gets full list of purchasable items that have associated class ids and their properties
+    getAssetPrices(currency, language, appid="440") {
+        query_params = {
+            key: this.apiKey,
+            currency,
+            language,
+            appid
+        }
+        return fetch(BASE_URL + STEAM_ECONOMY + 'GetAssetPrices/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // gets item info by class id
+    // can return a certain number of classes, and each class can be filtered by instance
+    // so for example, if a hat comes in genuine, normal, vintage, and unusual varities, these can be filtered 
+    // out according to the desired instance id - if known
+    getAssetClassInfo(language, class_count, class_id_list, appid="440") {
+        try {
+            query_params = {
+                key: this.apiKey,
+                class_count,
+                language,
+                appid
+            }
+
+            if(class_id_list < 1 || class_id_list.length < 1) {
+                throw new Error("Error: a minimum of 1 class ids is required")
+            }
+            
+            for(let i = 0; i < class_id_list.length; i++) {
+                query_params["classid" + i] = class_id_list[i];
+            }
+
+            return fetch(BASE_URL + STEAM_ECONOMY + 'GetAssetClassInfo/v1/?' + handleQueryParams(query_params))
+            .then(response => responseHandler(response))
+            .catch(e => e)
+        } catch(e) {
+            return e;
+        }
+    }
 }
 
 module.exports = Tf2Api
