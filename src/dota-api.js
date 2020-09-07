@@ -464,6 +464,48 @@ class dotaSteamApi {
         .then(response => responseHandler(response))
         .catch(e => e)
     }
+
+    // endpoints for ISteamEconomy: involves getting cosmetic item information
+
+    // gets full list of purchasable items that have associated class ids and their properties
+    getAssetPrices(currency, language, appid="570") {
+        query_params = {
+            key: this.apiKey,
+            currency,
+            language,
+            appid
+        }
+        return fetch(BASE_URL + STEAM_ECONOMY + 'GetAssetPrices/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
+    }
+
+    // gets item info by class id
+    // can return a certain number of classes
+    getAssetClassInfo(language, class_count, class_id_list, appid="570") {
+        try {
+            query_params = {
+                key: this.apiKey,
+                class_count,
+                language,
+                appid
+            }
+
+            if(class_id_list < 1 || class_id_list.length < 1) {
+                throw new Error("Error: a minimum of 1 class ids is required")
+            }
+            
+            for(let i = 0; i < class_id_list.length; i++) {
+                query_params["classid" + i] = class_id_list[i];
+            }
+
+            return fetch(BASE_URL + STEAM_ECONOMY + 'GetAssetClassInfo/v1/?' + handleQueryParams(query_params))
+            .then(response => responseHandler(response))
+            .catch(e => e)
+        } catch(e) {
+            return e;
+        }
+    }
 }
 
 module.exports = dotaSteamApi
