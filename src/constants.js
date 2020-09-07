@@ -8,6 +8,9 @@ const DOTA_STORE_ECON = "IEconItems_" + DOTA_TYPE + '/'
 const STEAM_USER_STATS = "ISteamUserStats/"
 const BASE_CDN = 'http://cdn.dota2.com/apps/dota2/images/'
 
+const TF2_APPID = "440"
+const TF2_STORE_ECON = "IEconItems_" + TF2_APPID + '/'
+
 module.exports = {
     BASE_URL,
     DOTA_ECON,
@@ -15,5 +18,6 @@ module.exports = {
     BASE_CDN,
     DOTA_VERSION,
     DOTA_STORE_ECON,
-    STEAM_USER_STATS
+    STEAM_USER_STATS,
+    TF2_STORE_ECON
 }

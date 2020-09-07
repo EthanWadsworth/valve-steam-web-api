@@ -396,7 +396,7 @@ class dotaSteamApi {
     }
 
     // get dota 2 news according to filter parameters
-    getNewsForDotaApp(maxlength, enddate, count, feeds, appid=570) {
+    getNewsForDotaApp(maxlength, enddate, count, feeds, appid="570") {
         query_params = {
             key: this.apiKey,
             appid,
@@ -416,7 +416,7 @@ class dotaSteamApi {
     // dota 2 does not currently have any achievements, but it if ever does, use these methods
 
     // returns percentage of global playerbase that has earned each ingame achievement
-    getGlobalAchievementPercentagesForDota(gameid) {
+    getGlobalAchievementPercentagesForDota(gameid="570") {
         query_params = {
             key: this.apiKey,
             gameid
@@ -429,7 +429,7 @@ class dotaSteamApi {
 
     // grab individual steam user achievements for dota
     // steam profile must be of public status
-    getDotaPlayerAchievements(steamid, appid, language) {
+    getDotaPlayerAchievements(steamid, language, appid="570") {
         query_params = {
             key: this.apiKey,
             steamid,
@@ -443,7 +443,7 @@ class dotaSteamApi {
     }
 
     // returns game name, version, and ingame stats tracked, dota has none as of now
-    getSchemaForDota(language, appid=570) {
+    getSchemaForDota(language, appid="570") {
         query_params = {
             key: this.apiKey,
             l: language,
@@ -455,7 +455,7 @@ class dotaSteamApi {
     }
 
     // returns number of current ingame players
-    getNumberOfCurrentPlayers(appid=570) {
+    getNumberOfCurrentPlayers(appid="570") {
         query_params = {
             key: this.apiKey,
             appid
