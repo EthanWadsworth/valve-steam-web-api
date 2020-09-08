@@ -145,14 +145,14 @@ class dotaSteamApi {
 
     // not sure what partner does exactly
     async getTopLiveEventGame(partner) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             partner
         }
 
         try {
             const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetTopLiveEventGame/v1/?' + handleQueryParams(query_params));
-                return responseHandler(query_params);
+                return responseHandler(response);
         }
         catch (e) {
             return e;
@@ -161,7 +161,7 @@ class dotaSteamApi {
 
     // not sure what partner does again
     async getTopLiveGame(partner) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             partner
         }
@@ -175,8 +175,11 @@ class dotaSteamApi {
         }
     }
 
-    async getTournamentPlayerStats(account_id, league_id, hero_id, time_frame) {
-        query_params = {
+    // only supports matches played at the International Dota 2 Championships
+    // team and player ids can be grabbed by using getTeamInforByTeamId
+    // team ids can be grabbed by getMatchDetails
+    async getTournamentPlayerStats(account_id, hero_id, time_frame, league_id=65006) {
+        const query_params = {
             key: this.apiKey,
             account_id,
             league_id,
@@ -192,9 +195,10 @@ class dotaSteamApi {
             return e;
         }
     }
-
+    
+    // might be deprecated
     async getTopWeekendTourneyGames(partner, home_divison) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             partner,
             home_divison
@@ -211,7 +215,7 @@ class dotaSteamApi {
 
     // Econ Dota 2
     getGameItems(language) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             language
         }
@@ -222,7 +226,7 @@ class dotaSteamApi {
     }
 
     getHeroes(language) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             language
         }
@@ -233,7 +237,7 @@ class dotaSteamApi {
     }
 
     getTournamentPrizePool(leagueid) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             leagueid
         }
@@ -244,7 +248,7 @@ class dotaSteamApi {
     }
 
     getRarities(language) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             language
         }

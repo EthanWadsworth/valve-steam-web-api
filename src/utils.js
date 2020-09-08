@@ -7,7 +7,7 @@ const responseHandler = (response) => {
 
 const handleQueryParams = (queryParams) => {
     let queryString = Object.keys(queryParams).map(objectKey => {
-        return queryParams[objectKey] ? objectKey + '=' + queryParams[objectKey] 
+        return queryParams[objectKey] || queryParams[objectKey] == 0 ? objectKey + '=' + queryParams[objectKey] 
         :
         null
     })
