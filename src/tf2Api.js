@@ -1,5 +1,5 @@
 const {responseHandler, handleQueryParams} = require('./utils')
-const {BASE_URL, STEAM_USER_STATS, TF2_STORE_ECON, STEAM_ECONOMY} = require('./constants')
+const {BASE_URL, STEAM_USER_STATS, TF2_STORE_ECON, STEAM_ECONOMY} = require('./constants').default
 
 class Tf2Api {
     constructor(apiKey) {

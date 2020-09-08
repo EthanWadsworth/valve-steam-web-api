@@ -1,3 +1,4 @@
+const fetch = require('node-fetch')
 const {responseHandler, handleQueryParams} = require('./utils')
 const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN, DOTA_VERSION, DOTA_STORE_ECON, STEAM_USER_STATS} = require('./constants')
 
@@ -8,7 +9,7 @@ class dotaSteamApi {
 
     // return match details for match with match_id
     async getMatchDetails(match_id) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             match_id
         }
@@ -40,7 +41,7 @@ class dotaSteamApi {
 
     // returns list of games in progess
     async getLiveLeagueGames() {
-        query_params = {
+        const query_params = {
             key: this.apiKey
         }
 
@@ -54,7 +55,7 @@ class dotaSteamApi {
     }
 
     async getMatchHistory(hero_id, game_mode, skill, min_players, account_id, league_id, start_at_match_id, matches_requested, tournament_games_only) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             hero_id,
             game_mode,
@@ -76,10 +77,10 @@ class dotaSteamApi {
         }
     }
 
-    async getMatchHistoryBySequenceNum(start_at_match_id_seq_num, matches_requested) {
-        query_params = {
+    async getMatchHistoryBySequenceNum(start_at_match_seq_num, matches_requested) {
+        const query_params = {
             key: this.apiKey,
-            start_at_match_id_seq_num,
+            start_at_match_seq_num,
             matches_requested
         }
 
@@ -110,7 +111,7 @@ class dotaSteamApi {
     }
 
     async getTeamInfoByTeamId(start_at_team_id, teams_requested) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             start_at_team_id,
             teams_requested
@@ -128,7 +129,7 @@ class dotaSteamApi {
     // undocumented api call
     // access denied on valid match entry, key verification required
     async getMatchMVPVotes(match_id) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             match_id
         }
