@@ -205,3 +205,167 @@ describe('getRarities', () => {
         })
     })
 })
+
+describe('getHeroIcon', () => {
+    const requestedHeroName = 'npc_dota_hero_antimage'
+    it('attempt to get url with invalid size', () => {
+        const requestedInvalidSize = 4
+        const result = dotaApi.getHeroIcon(requestedHeroName, requestedInvalidSize)
+        assert.equal(result,"Error: Please enter valid size")
+    })
+
+    it('grab valid img url with valid size', () => {
+        const requestedSize = 0
+        const result = dotaApi.getHeroIcon(requestedHeroName, requestedSize)
+        assert.isTrue(result.endsWith('sb.png'))
+    })
+})
+
+describe('getItemIcon', () => {
+    it('return url with item icon', () => {
+        const requestedItem = "item_blink"
+        const itemUrl = dotaApi.getItemIcon(requestedItem)
+        assert.isTrue(itemUrl.includes('blink'))
+    })
+})
+
+describe('getAbilityIcon', () => {
+    it('get ability icon with valid hero and ability name', () => {
+        const heroRequested = "npc_dota_hero_antimage"
+        const abilityRequested = "blink"
+        const abilityUrl = dotaApi.getAbilityIcon(heroRequested, abilityRequested)
+        assert.isTrue(abilityUrl.includes('antimage'))
+        assert.isTrue(abilityUrl.includes('blink'))
+    })
+})
+
+// come back to getHeroesWithIcons and getItemsWithIcons
+
+describe('getClientVersion', () => {
+    it('current and active dota client versions', () => {
+        dotaApi.getClientVersion()
+        .then(response => {
+            assert.exists(response.result)
+            assert.exists(response.result.success)
+            assert.isTrue(response.result.success)
+            assert.exists(response.result.min_allowed_version)
+            assert.exists(response.result.active_version)
+        })
+    })
+})
+
+describe('getServerVersion', () => {
+    it('current active dota server versions', () => {
+        dotaApi.getServerVersion()
+        .then(response => {
+            assert.exists(response.result)
+            assert.exists(response.result.success)
+            assert.isTrue(response.result.success)
+            assert.exists(response.result.active_version)
+        })
+    })
+})
+
+describe('getStoreMetaData', () => {
+    it('grab steam store/market filtering and sorting metadata', () => {
+        dotaApi.getStoreMetaData()
+        .then(response => {
+            assert.exists(response.result)
+            assert.exists(response.result.tabs)
+            assert.isArray(response.result.tabs)
+            assert.isAtLeast(response.result.tabs.length, 1)
+            assert.exists(response.result.filters)
+            assert.isArray(response.result.filters)
+            assert.isAtLeast(response.result.filters.length, 1)
+            assert.exists(response.result.sorting)
+            assert.exists(response.result.player_class_data)
+            assert.isArray(response.result.player_class_data)
+            assert.isAtLeast(response.result.player_class_data.length, 1)
+        })
+    })
+})
+
+describe('getPlayerItems', () => {
+    it('get cosmetic items with valid steam user id', () => {
+        dotaApi.getPlayerItems(process.env.STEAM_ACC_ID)
+        .then(response => {
+            assert.exists(response.result)
+            assert.exists(response.result.items)
+            assert.isArray(response.result.items)
+            assert.isAtLeast(response.result.items.length, 1)
+        })
+    })
+})
+
+describe('getEquippedPlayerItems', () => {
+    it('get hero cosmetics by valid class id and steam user id', () => {
+        // id for antimage
+        const heroClassID = 1
+        dotaApi.getEquippedPlayerItems(process.env.STEAM_ACC_ID, heroClassID)
+        .then(response => {
+            assert.exists(response.result)
+            assert.exists(response.result.items)
+            assert.isArray(response.result.items)
+        })
+    })
+})
+
+// describe('getRealtimeStats', () => {
+
+// })
+
+describe('getNewsForDotaApp', () => {
+    it('get news items with valid count and appid', () => {
+        const testCount = 10
+        const dotaAppId= 570
+        dotaApi.getNewsForDotaApp(null, null, testCount, null, dotaAppId)
+        .then(response => {
+            assert.exists(response.appnews)
+            assert.exists(response.appnews.appid)
+            assert.equal(response.appnews.appid, dotaAppId)
+            assert.exists(response.appnews.newsitems)
+            assert.isArray(response.appnews.newsitems)
+            assert.equal(response.appnews.newsitems.length, testCount)
+        })
+    })
+})
+
+describe('getGlobalAchievementPercentagesForDota', () => {
+    it('global achievement percentages', () => {
+        dotaApi.getGlobalAchievementPercentagesForDota()
+        .then(response => {
+            assert.exists(response.achievementpercentages)
+            assert.exists(response.achievementpercentages.achievements)
+            assert.isArray(response.achievementpercentages.achievements)
+        })
+    })
+})
+
+describe('getDotaPlayerAchievements', () => {
+    it('individual player achievements', () => {
+        dotaApi.getDotaPlayerAchievements(process.env.STEAM_ACC_ID)
+        .then(response => {
+            assert.exists(response.playerstats)
+        })
+    })
+})
+
+describe('getSchemaForDota', () => {
+    it('using dota app id', () => {
+        dotaApi.getSchemaForDota()
+        .then(response => {
+            assert.exists(response.game)
+            assert.exists(response.game.availableGameStats)
+        })
+    })
+})
+
+describe('getNumberOfCurrentPlayers', () => {
+    it('using dota app id', () => {
+        dotaApi.getNumberOfCurrentPlayers()
+        .then(response => {
+            assert.exists(response.response)
+            assert.exists(response.response.player_count)
+        })
+    })
+})
