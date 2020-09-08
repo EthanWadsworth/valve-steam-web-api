@@ -247,6 +247,7 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
+    // gets 
     getRarities(language) {
         const query_params = {
             key: this.apiKey,
@@ -271,7 +272,7 @@ class dotaSteamApi {
             const name = heroName.replace(/npc_dota_hero_/gi, '') + '_';
             return BASE_CDN + `heroes/${name}${imgSize}`;
         } catch(e) {
-            return e;
+            return e.message;
         }
     }
 
@@ -329,7 +330,7 @@ class dotaSteamApi {
 
     // for getting dota 2 client version
     getClientVersion() {
-        query_params = {
+        const query_params = {
             key: this.apiKey
         }
 
@@ -340,7 +341,7 @@ class dotaSteamApi {
 
     // for getting dota 2 server version
     getServerVersion() {
-        query_params = {
+        const query_params = {
             key: this.apiKey
         }
 
@@ -353,7 +354,7 @@ class dotaSteamApi {
 
     // returns current steam market data for the dota 2 page, including featured items and filters for each hero and category
     getStoreMetaData(language) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             language
         }
@@ -365,19 +366,19 @@ class dotaSteamApi {
 
     // get all dota 2 cosmetics currently owned by the steam user
     getPlayerItems(steamid) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             steamid
         }
 
-        return fetch(BASE_URL + DOTA_STORE_ECON +' GetPlayerItems/v1/?' + handleQueryParams(query_params))
+        return fetch(BASE_URL + DOTA_STORE_ECON + 'GetPlayerItems/v1/?' + handleQueryParams(query_params))
         .then(response => responseHandler(response))
         .catch(e => e)
     }
 
     // get items equipped for each hero by player
     getEquippedPlayerItems(steamid, class_id) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             steamid,
             class_id
@@ -389,8 +390,9 @@ class dotaSteamApi {
     }
 
     // return realitime stats with steam server id
+    // have yet to return anything from this method
     getRealtimeStats(server_steam_id) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             server_steam_id
         }
@@ -402,7 +404,7 @@ class dotaSteamApi {
 
     // get dota 2 news according to filter parameters
     getNewsForDotaApp(maxlength, enddate, count, feeds, appid="570") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             appid,
             maxlength,
@@ -422,7 +424,7 @@ class dotaSteamApi {
 
     // returns percentage of global playerbase that has earned each ingame achievement
     getGlobalAchievementPercentagesForDota(gameid="570") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             gameid
         }
@@ -435,7 +437,7 @@ class dotaSteamApi {
     // grab individual steam user achievements for dota
     // steam profile must be of public status
     getDotaPlayerAchievements(steamid, language, appid="570") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             steamid,
             appid,
@@ -449,7 +451,7 @@ class dotaSteamApi {
 
     // returns game name, version, and ingame stats tracked, dota has none as of now
     getSchemaForDota(language, appid="570") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             l: language,
             appid
@@ -461,7 +463,7 @@ class dotaSteamApi {
 
     // returns number of current ingame players
     getNumberOfCurrentPlayers(appid="570") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             appid
         }
@@ -474,7 +476,7 @@ class dotaSteamApi {
 
     // gets full list of purchasable items that have associated class ids and their properties
     getAssetPrices(currency, language, appid="570") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             currency,
             language,
@@ -489,7 +491,7 @@ class dotaSteamApi {
     // can return a certain number of classes
     getAssetClassInfo(language, class_count, class_id_list, appid="570") {
         try {
-            query_params = {
+            const query_params = {
                 key: this.apiKey,
                 class_count,
                 language,
