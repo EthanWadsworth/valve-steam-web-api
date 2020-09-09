@@ -1,5 +1,4 @@
 let dotaSteamApi = require('../dota-api')
-// let assert = require('assert');
 const {assert, expect} = require('chai')
 
 let dotaApi
@@ -394,7 +393,7 @@ describe('getNumberOfCurrentPlayers', () => {
     })
 })
 
-// api call is extremely slow do to data size, so error is currently returned
+// api call is extremely slow due to data size, so error is currently returned
 // describe('getAssetPrices', () => {
 //     it('with valid default parameters', () => {
 //         dotaApi.getAssetPrices()
