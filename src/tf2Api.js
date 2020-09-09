@@ -1,5 +1,6 @@
+const fetch = require('node-fetch')
 const {responseHandler, handleQueryParams} = require('./utils')
-const {BASE_URL, STEAM_USER_STATS, TF2_STORE_ECON, STEAM_ECONOMY} = require('./constants').default
+const {BASE_URL, STEAM_USER_STATS, TF2_STORE_ECON, STEAM_ECONOMY} = require('./constants')
 
 class Tf2Api {
     constructor(apiKey) {
@@ -8,7 +9,7 @@ class Tf2Api {
 
     // returns percentage of global playerbase that has earned each ingame achievement
     getGlobalAchievementPercentagesForTF2(gameid="440") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             gameid
         }
@@ -21,7 +22,7 @@ class Tf2Api {
     // grab individual steam user achievements for dota
     // steam profile must be of public status
     getTF2PlayerAchievements(steamid, language, appid="440") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             steamid,
             appid,
@@ -34,8 +35,8 @@ class Tf2Api {
     }
 
     // returns game name, version, and ingame stats tracked, dota has none as of now
-    getSchemaForDota(language, appid=570) {
-        query_params = {
+    getSchemaForTF2(language, appid="440") {
+        const query_params = {
             key: this.apiKey,
             l: language,
             appid
@@ -46,8 +47,8 @@ class Tf2Api {
     }
 
     // returns number of current ingame players
-    getNumberOfCurrentPlayers(appid=570) {
-        query_params = {
+    getNumberOfCurrentPlayers(appid=440) {
+        const query_params = {
             key: this.apiKey,
             appid
         }
@@ -57,8 +58,8 @@ class Tf2Api {
     }
 
     // get tf2 news according to filter parameters
-    getNewsForDotaApp(maxlength, enddate, count, feeds, appid="440") {
-        query_params = {
+    getNewsForTF2App(maxlength, enddate, count, feeds, appid="440") {
+        const query_params = {
             key: this.apiKey,
             appid,
             maxlength,
@@ -74,7 +75,7 @@ class Tf2Api {
 
     // returns users who are currently in possession of golden wrenches
     getGoldenWrenches() {
-        query_params = {
+        const query_params = {
             key: this.apiKey
         }
         return fetch(BASE_URL + 'ITFItems_440/GetGoldenWrenches/v2/?' + handleQueryParams(query_params))
@@ -84,7 +85,7 @@ class Tf2Api {
 
     // steam store endpoints
     getPlayerItems(steamid) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             steamid
         }
@@ -94,8 +95,8 @@ class Tf2Api {
     }
 
     // returns link to schema of items ingame
-    getItemsSchemaURL() {
-        query_params = {
+    getItemSchemaURL() {
+        const query_params = {
             key: this.apiKey
         }
         return fetch(BASE_URL + TF2_STORE_ECON + 'GetSchemaURL/v1/?' + handleQueryParams(query_params))
@@ -104,8 +105,8 @@ class Tf2Api {
     }
 
     // describes how ingame items are classified and their associated ids
-    getItemsSchemaOverview(language) {
-        query_params = {
+    getItemSchemaOverview(language) {
+        const query_params = {
             key: this.apiKey,
             language
         }
@@ -116,7 +117,7 @@ class Tf2Api {
 
     // returns steam market metadata for the TF2 market
     getSteamStoreMetaData(language) {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             language
         }
@@ -128,7 +129,7 @@ class Tf2Api {
     // current TF2 store status
     // call largely undocumented - status codes unknown
     getStoreStatus() {
-        query_params = {
+        const query_params = {
             key: this.apiKey
         }
         return fetch(BASE_URL + TF2_STORE_ECON + 'GetStoreStatus/v1/?' + handleQueryParams(query_params))
@@ -139,7 +140,7 @@ class Tf2Api {
     // endpoints for ISteamEconomy: involves getting cosmetic item information
     // gets full list of purchasable items that have associated class ids and their properties
     getAssetPrices(currency, language, appid="440") {
-        query_params = {
+        const query_params = {
             key: this.apiKey,
             currency,
             language,
@@ -156,7 +157,7 @@ class Tf2Api {
     // out according to the desired instance id - if known
     getAssetClassInfo(language, class_count, class_id_list, appid="440") {
         try {
-            query_params = {
+            const query_params = {
                 key: this.apiKey,
                 class_count,
                 language,
