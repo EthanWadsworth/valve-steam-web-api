@@ -239,7 +239,31 @@ describe('getAbilityIcon', () => {
     })
 })
 
-// come back to getHeroesWithIcons and getItemsWithIcons
+describe('getHeroesWithIcons', () => {
+    it('get hero data with img urls for valid size', () => {
+        dotaApi.getHeroesWithIcons(null, 0)
+        .then(response => {
+            assert.exists(response.result)
+            assert.exists(response.result.heroes)
+            assert.isArray(response.result.heroes)
+            assert.isAtLeast(response.result.heroes.length, 1)
+            assert.exists(response.result.heroes[0].heroIcon)
+        })
+    })
+})
+
+describe('getItemsWithIcons', () => {
+    it('get item data with item urls', () => {
+        dotaApi.getItemsWithIcons()
+        .then(response => {
+            assert.exists(response.result)
+            assert.exists(response.result.items)
+            assert.isArray(response.result.items)
+            assert.isAtLeast(response.result.items.length, 1)
+            assert.exists(response.result.items[0].icon)
+        })
+    })
+})
 
 describe('getClientVersion', () => {
     it('current and active dota client versions', () => {
@@ -361,11 +385,45 @@ describe('getSchemaForDota', () => {
 })
 
 describe('getNumberOfCurrentPlayers', () => {
-    it('using dota app id', () => {
+    it('using dota app id for current number of ingame players', () => {
         dotaApi.getNumberOfCurrentPlayers()
         .then(response => {
             assert.exists(response.response)
             assert.exists(response.response.player_count)
+        })
+    })
+})
+
+// api call is extremely slow do to data size, so error is currently returned
+// describe('getAssetPrices', () => {
+//     it('with valid default parameters', () => {
+//         dotaApi.getAssetPrices()
+//         .then(response => {
+//             console.log(response)
+//             assert.exists(response.result)
+//             assert.exists(response.result.success)
+//             assert.isTrue(response.result.success)
+//             assert.exists(response.result.assets)
+//             assert.isArray(response.result.assets)
+//             assert.isAtLeast(response.result.assets.length, 1)
+//         })
+//     })
+// })
+
+describe('getAssetClassInfo', () => {
+    it('testing with valid class count and class id list', () => {
+        const requestedClasses = 2
+        const classesList = [57939591, 57939593]
+        dotaApi.getAssetClassInfo(null, requestedClasses, classesList)
+        .then(response => {
+            assert.exists(response.result)
+            assert.exists(response.result.success)
+            assert.isTrue(response.result.success)
+
+            const returnedClasses = Object.keys(response.result)
+            assert.equal(returnedClasses.length, requestedClasses + 1)
+            assert.equal(returnedClasses[0], classesList[0])
+            assert.equal(returnedClasses[1], classesList[1])
         })
     })
 })
