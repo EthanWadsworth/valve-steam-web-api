@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "notest": "echo \"Error: no test specified\" && exit 1",
-    "test": "./node_modules/.bin/env-cmd -f ./config/dev.config mocha ./src/test/dotaApi.test ./src/test/tf2Api.test"
+    "test": "./node_modules/.bin/env-cmd -f ./config/dev.config mocha --timeout 10000 ./src/test/dotaApi.test ./src/test/tf2Api.test"
   },
   "keywords": [],
   "author": "",

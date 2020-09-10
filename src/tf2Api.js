@@ -84,6 +84,8 @@ class Tf2Api {
     }
 
     // steam store endpoints
+    // user MUST be logged in for method to return information
+    // empty object returned otherwise
     getPlayerItems(steamid) {
         const query_params = {
             key: this.apiKey,
@@ -162,6 +164,10 @@ class Tf2Api {
                 class_count,
                 language,
                 appid
+            }
+
+            if(!Array.isArray(class_id_list)) {
+                throw new Error("Error: class_id_list must be an array")
             }
 
             if(class_id_list < 1 || class_id_list.length < 1) {
