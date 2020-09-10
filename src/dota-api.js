@@ -262,7 +262,7 @@ class dotaSteamApi {
     // for grabbing image urls
 
     // getting hero icon with desired size
-    getHeroIcon(heroName, size) {
+    getHeroIcon(heroName, size=0) {
         try {
             const sizes = ['sb.png', 'lg.png', 'full.png', 'vert.jpg'];
             if (size < 0 || size >= sizes.length) {
@@ -291,7 +291,7 @@ class dotaSteamApi {
 
     // check for error handling from getHeroIcon
     // returns promise with list of heroes with hero icon urls attached 
-    async getHeroesWithIcons(language, size) {
+    async getHeroesWithIcons(language, size=0) {
         const heroData = await this.getHeroes(language)
         heroData.result.heroes.forEach(hero => {
             hero['heroIcon'] = this.getHeroIcon(hero.name, size)
@@ -490,6 +490,10 @@ class dotaSteamApi {
                 class_count,
                 language,
                 appid
+            }
+
+            if(!Array.isArray(class_id_list)) {
+                throw new Error("Error: class_id_list must be an array")
             }
 
             if(class_id_list < 1 || class_id_list.length < 1) {
