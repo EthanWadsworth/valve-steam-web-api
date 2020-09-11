@@ -2,12 +2,28 @@ const fetch = require('node-fetch')
 const {responseHandler, handleQueryParams} = require('./utils')
 const {BASE_URL, DOTA_ECON, DOTA_MATCHES, BASE_CDN, DOTA_VERSION, DOTA_STORE_ECON, STEAM_USER_STATS, STEAM_ECONOMY} = require('./constants')
 
+/**
+ * Wrapper class for the steam web api specically for Dota 2
+ */
 class dotaSteamApi {
+    /**
+     * Steam api key required, get one at: https://steamcommunity.com/dev/apikey
+     * @param {string} steamApiKey 
+     */
     constructor(steamApiKey) {
         this.apiKey = steamApiKey
     }
 
-    // return match details for match with match_id
+
+    /**
+     * IDOTA2MATCH_570: interface methods for dota 2 matches
+     */
+
+
+    /**
+     * Returns detailed match results for match with given id
+     * @param {number} match_id (uint64)
+     */
     async getMatchDetails(match_id) {
         const query_params = {
             key: this.apiKey,
@@ -22,9 +38,12 @@ class dotaSteamApi {
         }
     }
 
-    // warning: this method is deprecated 
-    // english string is returned be default
-    // to find language code: go here :https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+    /**
+     * WARNING: This method is deprecated
+     * Returns a list of all leagues supported in-game via DotaTV.
+     * @param {string} language (optional - ISO_639-1 code)
+     * Codes found here: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     */
     async getLeagueListing(language) {
         query_params = {
             key: this.apiKey,
@@ -39,7 +58,9 @@ class dotaSteamApi {
         }
     }
 
-    // returns list of games in progess
+    /**
+     * Gets live league games and their individual details
+     */
     async getLiveLeagueGames() {
         const query_params = {
             key: this.apiKey
@@ -54,6 +75,19 @@ class dotaSteamApi {
         }
     }
 
+    /**
+     * Retrieves list of matches with given filterable parameters
+     * Use null to ignore undesired filters
+     * @param {number} hero_id (optional - uint32)
+     * @param {number} game_mode (optional - uint32)
+     * @param {number} skill (optional - uint32)
+     * @param {string} min_players (optional)
+     * @param {string} account_id (optional)
+     * @param {string} league_id (optional)
+     * @param {string} start_at_match_id (optional)
+     * @param {string} matches_requested (optional)
+     * @param {string} tournament_games_only (optional)
+     */
     async getMatchHistory(hero_id, game_mode, skill, min_players, account_id, league_id, start_at_match_id, matches_requested, tournament_games_only) {
         const query_params = {
             key: this.apiKey,
@@ -77,6 +111,12 @@ class dotaSteamApi {
         }
     }
 
+    /**
+     * Retrieves lists of matches with given sequence range
+     * Starts at random sequence number if no start or end sequence specified
+     * @param {number} start_at_match_seq_num (optional - uint64)
+     * @param {number} matches_requested (optional - uint32)
+     */
     async getMatchHistoryBySequenceNum(start_at_match_seq_num, matches_requested) {
         const query_params = {
             key: this.apiKey,
@@ -93,7 +133,12 @@ class dotaSteamApi {
         }
     }
 
-    //deprecated 
+    /**
+     * WARNING: This call is deprecated
+     * Retrieves list of upcoming scheduled league games within given timestamp range
+     * @param {number} date_min (optional - uint32)
+     * @param {number} date_max (optional - uint32)
+     */
     async getScheduledLeagueGames(date_min, date_max) {
         query_params = {
             key: this.apiKey,
@@ -110,6 +155,11 @@ class dotaSteamApi {
         }
     }
 
+    /**
+     * Returns list of teams using the optional parameters
+     * @param {number} start_at_team_id (optional - uint64)
+     * @param {number} teams_requested (optional - uint32)
+     */
     async getTeamInfoByTeamId(start_at_team_id, teams_requested) {
         const query_params = {
             key: this.apiKey,
@@ -126,8 +176,10 @@ class dotaSteamApi {
         }
     }
 
-    // undocumented api call
-    // access denied on valid match entry, key verification required
+    /**
+     * Undocumented API call, currently restricts access even with valid key
+     * @param {number} match_id (uint64)
+     */
     async getMatchMVPVotes(match_id) {
         const query_params = {
             key: this.apiKey,
@@ -143,7 +195,10 @@ class dotaSteamApi {
         }
     }
 
-    // not sure what partner does exactly
+    /**
+     * Returns information about the most popular live tournament game
+     * @param {number} partner (int32)
+     */
     async getTopLiveEventGame(partner) {
         const query_params = {
             key: this.apiKey,
@@ -159,7 +214,10 @@ class dotaSteamApi {
         }
     }
 
-    // not sure what partner does again
+    /**
+     * Returns information about the most popular live game currently
+     * @param {number} partner (int32)
+     */
     async getTopLiveGame(partner) {
         const query_params = {
             key: this.apiKey,
@@ -175,16 +233,25 @@ class dotaSteamApi {
         }
     }
 
-    // only supports matches played at the International Dota 2 Championships
-    // team and player ids can be grabbed by using getTeamInforByTeamId
-    // team ids can be grabbed by getMatchDetails
-    async getTournamentPlayerStats(account_id, hero_id, time_frame, league_id=65006) {
+    /**
+     * Retrieves pro player stats from games played at the International 
+     * Dota 2 Championships
+     * Currently only supports matches played at the International (league_id=65006)
+     * Team and player ids can be grabbed by using getTeamInforByTeamId
+     * @param {string} account_id 
+     * @param {string} hero_id (optional)
+     * @param {string} time_frame (optional)
+     * @param {number} match_id (optional - uint32)
+     * @param {string} league_id (optional)
+     */
+    async getTournamentPlayerStats(account_id, hero_id, time_frame, match_id, league_id=65006) {
         const query_params = {
             key: this.apiKey,
             account_id,
             league_id,
             hero_id,
-            time_frame
+            time_frame,
+            match_id
         }
 
         try {
@@ -196,7 +263,12 @@ class dotaSteamApi {
         }
     }
     
-    // might be deprecated
+    /**
+     * Possibly deprecated
+     * Returns list of best tournament games over the weekend
+     * @param {number} partner (int32)
+     * @param {number} home_divison (optional - int32)
+     */
     async getTopWeekendTourneyGames(partner, home_divison) {
         const query_params = {
             key: this.apiKey,
@@ -213,7 +285,16 @@ class dotaSteamApi {
         }
     }
 
-    // Econ Dota 2
+
+    /**
+     * IEconDOTA2_570: interface methods for ingame objects
+     */
+
+
+    /**
+     * Returns list of ingame items with their name and price
+     * @param {string} language (optional)
+     */
     getGameItems(language) {
         const query_params = {
             key: this.apiKey,
@@ -225,6 +306,10 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
+    /**
+     * Returns list of ingame heroes with their names and hero ids
+     * @param {string} language (optional)
+     */
     getHeroes(language) {
         const query_params = {
             key: this.apiKey,
@@ -236,7 +321,12 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    getTournamentPrizePool(leagueid) {
+    /**
+     * Returns community funded portion of a tournament's prize pool
+     * The default leagueid is that of the Dota 2 International
+     * @param {number} leagueid (optional - int)
+     */
+    getTournamentPrizePool(leagueid=65006) {
         const query_params = {
             key: this.apiKey,
             leagueid
@@ -247,7 +337,10 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // gets 
+    /**
+     * Returns list of consmetic item rarities, and their corresponding name, id, and hex color
+     * @param {string} language (optional)
+     */
     getRarities(language) {
         const query_params = {
             key: this.apiKey,
@@ -259,9 +352,21 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // for grabbing image urls
 
-    // getting hero icon with desired size
+    /**
+     * Methods for returning dota 2 imgame object urls
+     */
+
+
+    /**
+     * Returns hero icon url with desired size
+     * @param {string} heroName 
+     * @param {number} size 
+     * 0: sb.png - smallest horizontal icon size (59 x 33)
+     * 1: lg.png - middle horizontal icon size (205 x 115)
+     * 2: full.png - largest of the 3 horizontal icons (256 x 144)
+     * 3: vert.jpg - ingame icon shown to left of hp and mana bars (235 x 272)
+     */
     getHeroIcon(heroName, size=0) {
         try {
             const sizes = ['sb.png', 'lg.png', 'full.png', 'vert.jpg'];
@@ -276,21 +381,35 @@ class dotaSteamApi {
         }
     }
 
-    // getting item icon
+    /**
+     * Returns item icon url with given name
+     * @param {string} itemName 
+     */
     getItemIcon(itemName) {
         const name = itemName.replace(/item_/gi, '') + '_';
         return BASE_CDN + `items/${name}lg.png`
     }
 
-    // valve currrently offers no known endpoint to get ability ids and names
-    // user will have to know the correct name of the desired ability
+    /**
+     * Returns ability icon url
+     * Valve currently offers no api endpoint to retrieve ability ids and names
+     * @param {string} heroName 
+     * @param {string} abilityName 
+     */
     getAbilityIcon(heroName, abilityName) {
         const name = heroName.replace(/npc_dota_hero_/gi, '') + '_';
         return BASE_CDN + `abilities/${name}${abilityName}_lg.png`
     }
-
-    // check for error handling from getHeroIcon
-    // returns promise with list of heroes with hero icon urls attached 
+ 
+    /**
+     * Returns list of heroes, their names, and ids, as well as their icons with desired size
+     * @param {string} language (optional)
+     * @param {number} size 
+     * 0: sb.png - smallest horizontal icon size (59 x 33) (default)
+     * 1: lg.png - middle horizontal icon size (205 x 115)
+     * 2: full.png - largest of the 3 horizontal icons (256 x 144)
+     * 3: vert.jpg - ingame icon shown to left of hp and mana bars (235 x 272)
+     */
     async getHeroesWithIcons(language, size=0) {
         const heroData = await this.getHeroes(language)
         heroData.result.heroes.forEach(hero => {
@@ -305,7 +424,10 @@ class dotaSteamApi {
         })
     }
 
-    // returns promise with list of items with item icon urls attached to each object
+    /**
+     * Returns promise with list of items with item icon urls attached to each object
+     * @param {string} language (optional)
+     */
     async getItemsWithIcons(language) {
         const itemData = await this.getGameItems(language)
         itemData.result.items.forEach(item => {
@@ -320,9 +442,15 @@ class dotaSteamApi {
         })
     }
 
-    // methods for dota 2 client and dota 2 server versions
 
-    // for getting dota 2 client version
+    /**
+     * IGGVERSION_570: Dota 2 version endpoints
+     */
+
+
+    /**
+     * Returns current active version of the Dota 2 game client
+     */
     getClientVersion() {
         const query_params = {
             key: this.apiKey
@@ -333,7 +461,10 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // for getting dota 2 server version
+
+    /**
+     * Returns current active version of Dota 2 game servers
+     */
     getServerVersion() {
         const query_params = {
             key: this.apiKey
@@ -344,9 +475,16 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // methods related to steam users and the steam economy market store for dota 2
 
-    // returns current steam market data for the dota 2 page, including featured items and filters for each hero and category
+    /**
+     * IEconItems_570: Dota 2 steam market and owned player cosmetics endpoints
+     */
+
+
+    /**
+     * Returns current steam market data for the dota 2 page, including featured items and filters for each hero and category
+     * @param {string} language (optional)
+     */
     getStoreMetaData(language) {
         const query_params = {
             key: this.apiKey,
@@ -358,7 +496,10 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // get all dota 2 cosmetics currently owned by the steam user
+    /**
+     * Returns list of all dota 2 cosmetics and their information owned by given user
+     * @param {number} steamid (uint64)
+     */
     getPlayerItems(steamid) {
         const query_params = {
             key: this.apiKey,
@@ -370,7 +511,11 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // get items equipped for each hero by player
+    /**
+     * Returns list of cosmetic items that steam user has equipped for given hero id
+     * @param {number} steamid (uint64)
+     * @param {number} class_id (uint32)
+     */
     getEquippedPlayerItems(steamid, class_id) {
         const query_params = {
             key: this.apiKey,
@@ -383,8 +528,16 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // return realitime stats with steam server id
-    // have yet to return anything from this method
+
+    /**
+     * Miscellaneous endpoints
+     */
+
+
+    /**
+     * Return realtime stats for the given steam server id
+     * @param {number} server_steam_id (uint64)
+     */
     getRealtimeStats(server_steam_id) {
         const query_params = {
             key: this.apiKey,
@@ -396,7 +549,15 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // get dota 2 news according to filter parameters
+    /**
+     * Get recent news for Dota 2 by the filterable parameters
+     * The appid should not be changed, default is 570
+     * @param {number} maxlength (optional - uint32)
+     * @param {number} enddate (optional - uint32 unix epoch timestamp)
+     * @param {number} count (optional uint32)
+     * @param {string} feeds (optional)
+     * @param {number} appid (uint32)
+     */
     getNewsForDotaApp(maxlength, enddate, count, feeds, appid="570") {
         const query_params = {
             key: this.apiKey,
@@ -412,11 +573,18 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // getting steam user and playerbase dota 2 global stats
 
-    // dota 2 does not currently have any achievements, but it if ever does, use these methods
+    /**
+     * ISteamUserStats: getting steam user and playerbase dota 2 global stats
+     * Dota 2 does not currently support player achievements 
+     */
 
-    // returns percentage of global playerbase that has earned each ingame achievement
+
+    /**
+     * Returns list of achievement and percentage of global playerbase that have earned each
+     * Can be called with no parameters because the default is set to Dota2's gameid
+     * @param {number} gameid (uint64)
+     */
     getGlobalAchievementPercentagesForDota(gameid="570") {
         const query_params = {
             key: this.apiKey,
@@ -428,8 +596,14 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // grab individual steam user achievements for dota
-    // steam profile must be of public status
+    /**
+     * Returns list of steam user achievements
+     * Profile of user must be public
+     * the appid parameter should not be used - default is already set to Dota
+     * @param {number} steamid (uint64)
+     * @param {string} language (optional)
+     * @param {number} appid (uint32)
+     */
     getDotaPlayerAchievements(steamid, language, appid="570") {
         const query_params = {
             key: this.apiKey,
@@ -443,7 +617,11 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // returns game name, version, and ingame stats tracked, dota has none as of now
+    /**
+     * Returns game name, version, and ingame stats tracked, Dota has none as of now
+     * @param {string} language (optional)
+     * @param {number} appid (uint32)
+     */
     getSchemaForDota(language, appid="570") {
         const query_params = {
             key: this.apiKey,
@@ -455,7 +633,10 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // returns number of current ingame players
+    /**
+     * Returns number of current ingame players
+     * @param {number} appid (uint32)
+     */
     getNumberOfCurrentPlayers(appid="570") {
         const query_params = {
             key: this.apiKey,
@@ -466,9 +647,19 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // endpoints for ISteamEconomy: involves getting cosmetic item information
 
-    // gets full list of purchasable items that have associated class ids and their properties
+    /**
+     * ISteamEconomy: endpoints for dota 2 cosmetic item information
+     */
+
+
+    /**
+     * Returns full list of purchasable items and their individual class ids and properties
+     * appid should be left as default value for Dota2 cosmetic item information
+     * @param {string} currency (optional)
+     * @param {string} language (optional)
+     * @param {number} appid (uint32)
+     */
     getAssetPrices(currency, language, appid="570") {
         const query_params = {
             key: this.apiKey,
@@ -481,8 +672,15 @@ class dotaSteamApi {
         .catch(e => e)
     }
 
-    // gets item info by class id
-    // can return a certain number of classes
+    /**
+     * Returns item info by class id from the class_id_list array
+     * To get item class ids, use getAssetPrices
+     * appid should be left out of method call, default value set to Dota2
+     * @param {string} language (optional)
+     * @param {number} class_count (uint32)
+     * @param {Array(number)} class_id_list 
+     * @param {number} appid (uint32)
+     */
     getAssetClassInfo(language, class_count, class_id_list, appid="570") {
         try {
             const query_params = {

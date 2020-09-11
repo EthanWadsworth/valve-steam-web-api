@@ -2,12 +2,23 @@ const fetch = require('node-fetch')
 const {responseHandler, handleQueryParams} = require('./utils')
 const {BASE_URL, STEAM_USER_STATS, TF2_STORE_ECON, STEAM_ECONOMY} = require('./constants')
 
+/**
+ * Wrapper class for the steam web api specically for Dota 2
+ */
 class Tf2Api {
+    /**
+     * Steam api key required, get one at: https://steamcommunity.com/dev/apikey
+     * @param {string} steamApiKey 
+     */
     constructor(apiKey) {
         this.apiKey = apiKey
     }
 
-    // returns percentage of global playerbase that has earned each ingame achievement
+    /**
+     * Return list of ingame achievements and the percentage of player that has earned each one
+     * Method can and should be called with no parameters as tf2 is already specified
+     * @param {number} gameid (uint64)
+     */
     getGlobalAchievementPercentagesForTF2(gameid="440") {
         const query_params = {
             key: this.apiKey,
@@ -19,8 +30,13 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // grab individual steam user achievements for dota
-    // steam profile must be of public status
+    /**
+     * Returns list of earned achievements for the given steam user
+     * Steam user profile must be public for api call to work successfully
+     * @param {number} steamid (uint64)
+     * @param {string} language (optional)
+     * @param {number} appid (uint32)
+     */
     getTF2PlayerAchievements(steamid, language, appid="440") {
         const query_params = {
             key: this.apiKey,
@@ -34,7 +50,11 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // returns game name, version, and ingame stats tracked, dota has none as of now
+    /**
+     * Returns game name, version, and list of ingame stats tracked
+     * @param {string} language (optional)
+     * @param {number} appid (uint32)
+     */
     getSchemaForTF2(language, appid="440") {
         const query_params = {
             key: this.apiKey,
@@ -46,7 +66,10 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // returns number of current ingame players
+    /**
+     * Returns current number of ingame players
+     * @param {number} appid (uint32)
+     */
     getNumberOfCurrentPlayers(appid=440) {
         const query_params = {
             key: this.apiKey,
@@ -57,7 +80,22 @@ class Tf2Api {
         .catch(e => e)
     }
 
+    
+    /**
+     * Miscellaneous endpoints
+     */
+
+     
     // get tf2 news according to filter parameters
+    /**
+     * Get recent news for TF2 by the filterable parameters
+     * The appid should not be changed, default is 440
+     * @param {number} maxlength (optional - uint32)
+     * @param {number} enddate (optional - uint32 unix epoch timestamp)
+     * @param {number} count (optional - uint32)
+     * @param {string} feeds (optional)
+     * @param {number} appid (uint32)
+     */
     getNewsForTF2App(maxlength, enddate, count, feeds, appid="440") {
         const query_params = {
             key: this.apiKey,
@@ -73,7 +111,9 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // returns users who are currently in possession of golden wrenches
+    /**
+     * Returns list of users who are currently in possession of golden wrenches
+     */
     getGoldenWrenches() {
         const query_params = {
             key: this.apiKey
@@ -83,9 +123,16 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // steam store endpoints
-    // user MUST be logged in for method to return information
-    // empty object returned otherwise
+
+    /**
+     * IEconItems_440:  TF2 steam market and owned player cosmetics endpoints
+     */
+
+
+     /**
+      * Returns list of all tf2 cosmetics and their information owned by given user
+      * @param {number} steamid (uint64)
+      */
     getPlayerItems(steamid) {
         const query_params = {
             key: this.apiKey,
@@ -96,7 +143,9 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // returns link to schema of items ingame
+    /**
+     * Returns link to online file of schema of ingame items
+     */
     getItemSchemaURL() {
         const query_params = {
             key: this.apiKey
@@ -106,7 +155,10 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // describes how ingame items are classified and their associated ids
+    /**
+     * Returns descritpion of how ingame items are classified and the propertiers and id of each cosmetic item
+     * @param {string} language (optional)
+     */
     getItemSchemaOverview(language) {
         const query_params = {
             key: this.apiKey,
@@ -117,7 +169,10 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // returns steam market metadata for the TF2 market
+    /**
+     * Returns current steam market data for the tf2 page, including featured items and filters for each class
+     * @param {string} language (optional)
+     */
     getSteamStoreMetaData(language) {
         const query_params = {
             key: this.apiKey,
@@ -128,8 +183,10 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // current TF2 store status
-    // call largely undocumented - status codes unknown
+    /**
+     * Call undocumented - status code meanings unknown
+     * Probably should not be used until more information is found
+     */
     getStoreStatus() {
         const query_params = {
             key: this.apiKey
@@ -139,8 +196,19 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // endpoints for ISteamEconomy: involves getting cosmetic item information
-    // gets full list of purchasable items that have associated class ids and their properties
+
+    /**
+     * ISteamEconomy: endpoints for tf2 cosmetic item information
+     */
+
+
+    /**
+     * Returns full list of purchasable items and their individual class ids and properties
+     * appid should be left as default value for TF2 cosmetic item information
+     * @param {string} currency (optional)
+     * @param {string} language (optional)
+     * @param {number} appid (uint32)
+     */
     getAssetPrices(currency, language, appid="440") {
         const query_params = {
             key: this.apiKey,
@@ -153,10 +221,15 @@ class Tf2Api {
         .catch(e => e)
     }
 
-    // gets item info by class id
-    // can return a certain number of classes, and each class can be filtered by instance
-    // so for example, if a hat comes in genuine, normal, vintage, and unusual varities, these can be filtered 
-    // out according to the desired instance id - if known
+    /**
+     * Returns item info by class id from the class_id_list array
+     * To get item class ids, use getAssetPrices
+     * appid should be left out of method call, default value set to TF2
+     * @param {string} language (optional)
+     * @param {number} class_count (uint32)
+     * @param {Array(number)} class_id_list 
+     * @param {number} appid (uint32)
+     */
     getAssetClassInfo(language, class_count, class_id_list, appid="440") {
         try {
             const query_params = {
