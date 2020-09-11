@@ -24,18 +24,14 @@ class dotaSteamApi {
      * Returns detailed match results for match with given id
      * @param {number} match_id (uint64)
      */
-    async getMatchDetails(match_id) {
+    getMatchDetails(match_id) {
         const query_params = {
             key: this.apiKey,
             match_id
         }
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetMatchDetails/v1?' + handleQueryParams(query_params))
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetMatchDetails/v1?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
@@ -44,35 +40,26 @@ class dotaSteamApi {
      * @param {string} language (optional - ISO_639-1 code)
      * Codes found here: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
      */
-    async getLeagueListing(language) {
+    getLeagueListing(language) {
         query_params = {
             key: this.apiKey,
             language
         }
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetLeagueListing/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetLeagueListing/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
      * Gets live league games and their individual details
      */
-    async getLiveLeagueGames() {
+    getLiveLeagueGames() {
         const query_params = {
             key: this.apiKey
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetLiveLeagueGames/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetLiveLeagueGames/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
@@ -88,7 +75,7 @@ class dotaSteamApi {
      * @param {string} matches_requested (optional)
      * @param {string} tournament_games_only (optional)
      */
-    async getMatchHistory(hero_id, game_mode, skill, min_players, account_id, league_id, start_at_match_id, matches_requested, tournament_games_only) {
+    getMatchHistory(hero_id, game_mode, skill, min_players, account_id, league_id, start_at_match_id, matches_requested, tournament_games_only) {
         const query_params = {
             key: this.apiKey,
             hero_id,
@@ -101,14 +88,9 @@ class dotaSteamApi {
             matches_requested,
             tournament_games_only
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetMatchHistory/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetMatchHistory/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
@@ -117,20 +99,15 @@ class dotaSteamApi {
      * @param {number} start_at_match_seq_num (optional - uint64)
      * @param {number} matches_requested (optional - uint32)
      */
-    async getMatchHistoryBySequenceNum(start_at_match_seq_num, matches_requested) {
+    getMatchHistoryBySequenceNum(start_at_match_seq_num, matches_requested) {
         const query_params = {
             key: this.apiKey,
             start_at_match_seq_num,
             matches_requested
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetMatchHistoryBySequenceNum/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetMatchHistoryBySequenceNum/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
@@ -139,20 +116,15 @@ class dotaSteamApi {
      * @param {number} date_min (optional - uint32)
      * @param {number} date_max (optional - uint32)
      */
-    async getScheduledLeagueGames(date_min, date_max) {
+    getScheduledLeagueGames(date_min, date_max) {
         query_params = {
             key: this.apiKey,
             date_min,
             date_max
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetScheduledLeagueGames/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetScheduledLeagueGames/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
@@ -160,77 +132,57 @@ class dotaSteamApi {
      * @param {number} start_at_team_id (optional - uint64)
      * @param {number} teams_requested (optional - uint32)
      */
-    async getTeamInfoByTeamId(start_at_team_id, teams_requested) {
+    getTeamInfoByTeamId(start_at_team_id, teams_requested) {
         const query_params = {
             key: this.apiKey,
             start_at_team_id,
             teams_requested
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetTeamInfoByTeamID/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetTeamInfoByTeamID/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
      * Undocumented API call, currently restricts access even with valid key
      * @param {number} match_id (uint64)
      */
-    async getMatchMVPVotes(match_id) {
+    getMatchMVPVotes(match_id) {
         const query_params = {
             key: this.apiKey,
             match_id
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetMatchMVPVotes/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetMatchMVPVotes/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
      * Returns information about the most popular live tournament game
      * @param {number} partner (int32)
      */
-    async getTopLiveEventGame(partner) {
+    getTopLiveEventGame(partner) {
         const query_params = {
             key: this.apiKey,
             partner
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetTopLiveEventGame/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetTopLiveEventGame/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
      * Returns information about the most popular live game currently
      * @param {number} partner (int32)
      */
-    async getTopLiveGame(partner) {
+    getTopLiveGame(partner) {
         const query_params = {
             key: this.apiKey,
             partner
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetTopLiveGame/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetTopLiveGame/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
     /**
@@ -244,7 +196,7 @@ class dotaSteamApi {
      * @param {number} match_id (optional - uint32)
      * @param {string} league_id (optional)
      */
-    async getTournamentPlayerStats(account_id, hero_id, time_frame, match_id, league_id=65006) {
+    getTournamentPlayerStats(account_id, hero_id, time_frame, match_id, league_id=65006) {
         const query_params = {
             key: this.apiKey,
             account_id,
@@ -253,14 +205,9 @@ class dotaSteamApi {
             time_frame,
             match_id
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetTournamentPlayerStats/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetTournamentPlayerStats/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
     
     /**
@@ -269,20 +216,15 @@ class dotaSteamApi {
      * @param {number} partner (int32)
      * @param {number} home_divison (optional - int32)
      */
-    async getTopWeekendTourneyGames(partner, home_divison) {
+    getTopWeekendTourneyGames(partner, home_divison) {
         const query_params = {
             key: this.apiKey,
             partner,
             home_divison
         }
-
-        try {
-            const response = await fetch(BASE_URL + DOTA_MATCHES + 'GetTopWeekendTourneyGames/v1/?' + handleQueryParams(query_params));
-                return responseHandler(response);
-        }
-        catch (e) {
-            return e;
-        }
+        return fetch(BASE_URL + DOTA_MATCHES + 'GetTopWeekendTourneyGames/v1/?' + handleQueryParams(query_params))
+        .then(response => responseHandler(response))
+        .catch(e => e)
     }
 
 

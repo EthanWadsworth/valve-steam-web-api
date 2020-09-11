@@ -4,17 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "notest": "echo \"Error: no test specified\" && exit 1",
     "test": "./node_modules/.bin/env-cmd -f ./config/dev.config mocha --timeout 10000 ./src/test/dotaApi.test ./src/test/tf2Api.test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.2.0",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "env-cmd": "^10.1.0",
     "mocha": "^8.1.3"
   }
