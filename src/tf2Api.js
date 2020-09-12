@@ -15,7 +15,7 @@ class Tf2Api {
     }
 
     /**
-     * Return list of ingame achievements and the percentage of player that has earned each one
+     * Return list of ingame achievements and the percentage of the global playerbase that has earned each one
      * Method can and should be called with no parameters as tf2 is already specified
      * @param {number} gameid (uint64)
      */
@@ -156,7 +156,7 @@ class Tf2Api {
     }
 
     /**
-     * Returns descritpion of how ingame items are classified and the propertiers and id of each cosmetic item
+     * Returns description of how ingame items are classified and the propertiers and id of each cosmetic item
      * @param {string} language (optional)
      */
     getItemSchemaOverview(language) {
