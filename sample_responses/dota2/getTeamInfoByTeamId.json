@@ -1,0 +1,24 @@
+{
+    "result": {
+        "status": 1,
+        "teams": [
+            {
+                "name": "Team Liquid",
+                "tag": "Liquid",
+                "time_created": 1349400722,
+                "logo": 1043092885845384919,
+                "logo_sponsor": 785230100972621618,
+                "country_code": "",
+                "url": "www.teamliquidpro.com/",
+                "games_played": 1506,
+                "player_0_account_id": 39128794,
+                "player_1_account_id": 54580962,
+                "player_2_account_id": 77490514,
+                "player_3_account_id": 86738694,
+                "player_4_account_id": 152962063,
+                "player_5_account_id": 401792574,
+                "admin_account_id": 39128794
+            }
+        ]
+    }
+}

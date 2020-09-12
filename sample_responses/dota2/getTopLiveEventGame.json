@@ -1,0 +1,404 @@
+{
+    "game_list": [
+        {
+            "activate_time": 1599949568,
+            "deactivate_time": 0,
+            "server_steam_id": 90138743061136393,
+            "lobby_id": 26841277496244087,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 2550,
+            "delay": 10,
+            "spectators": 9,
+            "game_mode": 19,
+            "average_mmr": 7765,
+            "match_id": 5611997925,
+            "series_id": 0,
+            "sort_score": 8474,
+            "last_update_time": 1599952128,
+            "radiant_lead": 73077,
+            "radiant_score": 0,
+            "dire_score": 27,
+            "players": [
+                {
+                    "account_id": 86824994,
+                    "hero_id": 112
+                },
+                {
+                    "account_id": 193310479,
+                    "hero_id": 100
+                },
+                {
+                    "account_id": 203351055,
+                    "hero_id": 39
+                },
+                {
+                    "account_id": 104376371,
+                    "hero_id": 46
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 5
+        },
+        {
+            "activate_time": 1599951872,
+            "deactivate_time": 0,
+            "server_steam_id": 90138743820252171,
+            "lobby_id": 26841277507572785,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 365,
+            "delay": 10,
+            "spectators": 0,
+            "game_mode": 19,
+            "average_mmr": 6404,
+            "match_id": 5612023994,
+            "series_id": 0,
+            "sort_score": 7104,
+            "last_update_time": 1599952256,
+            "radiant_lead": 12120,
+            "radiant_score": 0,
+            "dire_score": 4,
+            "players": [
+                {
+                    "account_id": 387624608,
+                    "hero_id": 100
+                },
+                {
+                    "account_id": 108088937,
+                    "hero_id": 112
+                },
+                {
+                    "account_id": 451317002,
+                    "hero_id": 47
+                },
+                {
+                    "account_id": 130996511,
+                    "hero_id": 46
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 5
+        },
+        {
+            "activate_time": 1599950080,
+            "deactivate_time": 0,
+            "server_steam_id": 90138743075529735,
+            "lobby_id": 26841277498954778,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 2064,
+            "delay": 10,
+            "spectators": 1,
+            "game_mode": 19,
+            "average_mmr": 6313,
+            "match_id": 5612004275,
+            "series_id": 0,
+            "sort_score": 7014,
+            "last_update_time": 1599952128,
+            "radiant_lead": 56362,
+            "radiant_score": 0,
+            "dire_score": 15,
+            "players": [
+                {
+                    "account_id": 144083798,
+                    "hero_id": 129
+                },
+                {
+                    "account_id": 54214079,
+                    "hero_id": 70
+                },
+                {
+                    "account_id": 115553784,
+                    "hero_id": 39
+                },
+                {
+                    "account_id": 48578808,
+                    "hero_id": 35
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 5
+        },
+        {
+            "activate_time": 1599949440,
+            "deactivate_time": 0,
+            "server_steam_id": 90138743222951936,
+            "lobby_id": 26841277495690751,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 2764,
+            "delay": 10,
+            "spectators": 0,
+            "game_mode": 19,
+            "average_mmr": 6025,
+            "match_id": 5611996534,
+            "series_id": 0,
+            "sort_score": 6725,
+            "last_update_time": 1599952256,
+            "radiant_lead": 112770,
+            "radiant_score": 0,
+            "dire_score": 26,
+            "players": [
+                {
+                    "account_id": 203285434,
+                    "hero_id": 30
+                },
+                {
+                    "account_id": 93298794,
+                    "hero_id": 87
+                },
+                {
+                    "account_id": 191938764,
+                    "hero_id": 112
+                },
+                {
+                    "account_id": 97040819,
+                    "hero_id": 46
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 4
+        },
+        {
+            "activate_time": 1599951616,
+            "deactivate_time": 0,
+            "server_steam_id": 90138743204894722,
+            "lobby_id": 26841277506873958,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 468,
+            "delay": 10,
+            "spectators": 0,
+            "game_mode": 19,
+            "average_mmr": 5911,
+            "match_id": 5612022414,
+            "series_id": 0,
+            "sort_score": 6611,
+            "last_update_time": 1599952128,
+            "radiant_lead": 17264,
+            "radiant_score": 0,
+            "dire_score": 5,
+            "players": [
+                {
+                    "account_id": 86739396,
+                    "hero_id": 87
+                },
+                {
+                    "account_id": 116434499,
+                    "hero_id": 112
+                },
+                {
+                    "account_id": 215584294,
+                    "hero_id": 70
+                },
+                {
+                    "account_id": 125305146,
+                    "hero_id": 39
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 5
+        },
+        {
+            "activate_time": 1599951104,
+            "deactivate_time": 0,
+            "server_steam_id": 90138734678358016,
+            "lobby_id": 26841277503772116,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 1044,
+            "delay": 10,
+            "spectators": 0,
+            "game_mode": 19,
+            "average_mmr": 5613,
+            "match_id": 5612015567,
+            "series_id": 0,
+            "sort_score": 6313,
+            "last_update_time": 1599952128,
+            "radiant_lead": 31663,
+            "radiant_score": 0,
+            "dire_score": 10,
+            "players": [
+                {
+                    "account_id": 103843590,
+                    "hero_id": 70
+                },
+                {
+                    "account_id": 123743013,
+                    "hero_id": 39
+                },
+                {
+                    "account_id": 372404128,
+                    "hero_id": 35
+                },
+                {
+                    "account_id": 308553113,
+                    "hero_id": 63
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 4
+        },
+        {
+            "activate_time": 1599950464,
+            "deactivate_time": 0,
+            "server_steam_id": 90138743024461824,
+            "lobby_id": 26841277500933978,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 1667,
+            "delay": 10,
+            "spectators": 0,
+            "game_mode": 19,
+            "average_mmr": 5596,
+            "match_id": 5612008836,
+            "series_id": 0,
+            "sort_score": 6296,
+            "last_update_time": 1599952256,
+            "radiant_lead": 71619,
+            "radiant_score": 0,
+            "dire_score": 20,
+            "players": [
+                {
+                    "account_id": 325394829,
+                    "hero_id": 46
+                },
+                {
+                    "account_id": 176804276,
+                    "hero_id": 112
+                },
+                {
+                    "account_id": 34414262,
+                    "hero_id": 129
+                },
+                {
+                    "account_id": 46329232,
+                    "hero_id": 63
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 5
+        },
+        {
+            "activate_time": 1599950080,
+            "deactivate_time": 0,
+            "server_steam_id": 90138743168548866,
+            "lobby_id": 26841277498925787,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 2061,
+            "delay": 10,
+            "spectators": 0,
+            "game_mode": 19,
+            "average_mmr": 5580,
+            "match_id": 5612004249,
+            "series_id": 0,
+            "sort_score": 6280,
+            "last_update_time": 1599952128,
+            "radiant_lead": 112790,
+            "radiant_score": 0,
+            "dire_score": 20,
+            "players": [
+                {
+                    "account_id": 78406875,
+                    "hero_id": 112
+                },
+                {
+                    "account_id": 50249550,
+                    "hero_id": 46
+                },
+                {
+                    "account_id": 143647827,
+                    "hero_id": 129
+                },
+                {
+                    "account_id": 354354087,
+                    "hero_id": 63
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 4
+        },
+        {
+            "activate_time": 1599950848,
+            "deactivate_time": 0,
+            "server_steam_id": 90138744199748614,
+            "lobby_id": 26841277502656302,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 1362,
+            "delay": 10,
+            "spectators": 0,
+            "game_mode": 19,
+            "average_mmr": 5552,
+            "match_id": 5612012796,
+            "series_id": 0,
+            "sort_score": 6252,
+            "last_update_time": 1599952256,
+            "radiant_lead": 46576,
+            "radiant_score": 0,
+            "dire_score": 13,
+            "players": [
+                {
+                    "account_id": 230577653,
+                    "hero_id": 112
+                },
+                {
+                    "account_id": 116060071,
+                    "hero_id": 46
+                },
+                {
+                    "account_id": 127341596,
+                    "hero_id": 63
+                },
+                {
+                    "account_id": 86751904,
+                    "hero_id": 100
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 5
+        },
+        {
+            "activate_time": 1599948800,
+            "deactivate_time": 0,
+            "server_steam_id": 90138744177770497,
+            "lobby_id": 26841277492198669,
+            "league_id": 0,
+            "lobby_type": 12,
+            "game_time": 3266,
+            "delay": 10,
+            "spectators": 0,
+            "game_mode": 19,
+            "average_mmr": 5352,
+            "match_id": 5611988417,
+            "series_id": 0,
+            "sort_score": 6052,
+            "last_update_time": 1599952128,
+            "radiant_lead": 91143,
+            "radiant_score": 0,
+            "dire_score": 44,
+            "players": [
+                {
+                    "account_id": 300045238,
+                    "hero_id": 46
+                },
+                {
+                    "account_id": 911733893,
+                    "hero_id": 30
+                },
+                {
+                    "account_id": 49382246,
+                    "hero_id": 39
+                },
+                {
+                    "account_id": 188275630,
+                    "hero_id": 112
+                }
+            ],
+            "building_state": 19138340,
+            "custom_game_difficulty": 5
+        }
+    ]
+}
