@@ -419,3 +419,142 @@ const classesList = [57939591, 57939593] // 2 pieces of the Demon Blood item set
 dotaSteamApi.getAssetClassInfo(null, requestedClasses, classesList)
 .then(data => console.log(data))
 ```
+
+## TF2 Response Methods
+All methods return promises that can be handled
+
+### getGlobalAchievementPercentagesForTF2
+Return list of ingame achievements and the percentage of the global playerbase that has earned each one
+
+Parameters: None
+```
+tf2SteamApi.getGlobalAchievementPercentagesForTF2()
+.then(data => console.log(data))
+```
+
+### getTF2PlayerAchievements
+Returns list of earned achievements for the given steam user
+
+Parameters:
+* steamid - user steam id
+* language - (optional) language to provide results in
+```
+tf2SteamApi.getTF2PlayerAchievements('<uint64_steamid>')
+.then(data => console.log(data))
+```
+
+### getSchemaForTF2
+Returns game name, version, and list of ingame stats tracked
+
+Parameters:
+* language - (optional) language to return results in
+```
+tf2SteamApi.getSchemaForTF2()
+.then(data => console.log(data))
+```
+
+### getNumberOfCurrentPlayers
+Returns current number of ingame players
+
+Parameters: None
+```
+tf2SteamApi.getNumberOfCurrentPlayers()
+.then(data => console.log(data))
+```
+
+### getNewsForTF2App
+Return recent news for TF2 using filterable parameters
+
+Parameters:
+* maxlength - (optional) 	Maximum length for the content to return, 0 for full content, if it's less then a blurb is generated to fit
+* enddate - (optional) Retrieve posts earlier than this date (unix epoch timestamp)
+* count - (optional) # of posts to retrieve (default 20)
+* feeds - (optional) Comma-separated list of feed names to return news for
+```
+const testCount = 10
+tf2SteamApi.getNewsForTF2App(null, null, testCount)
+.then(data => console.log(data))
+```
+
+### getGoldenWrenches
+Return list of steam users who are currently in possession of golden wrenches
+
+Parameters: None
+```
+tf2SteamApi.getGoldenWrenches()
+.then(data => console.log(data))
+```
+
+### getPlayerItems
+Return list of tf2 items and item details owned by given steam user
+
+Profile must be public for method to work
+
+Parameters:
+* steamid - steam user id
+```
+tf2.getPlayerItems('<uint64_steamid>')
+.then(data => console.log(data))
+```
+
+### getItemSchemaURL
+Returns link to online file of schema for ingame items (how items are classified)
+
+Parameters: None
+```
+tf2SteamApi.getItemSchemaURL()
+.then(data => console.log(data))
+```
+
+### getItemSchemaOverview
+Returns description of how ingame items are classified and the propertiers and id of each cosmetic item
+
+Parameters:
+* language - (optional) language to return results in
+```
+tf2SteamApi.getItemSchemaOverview()
+.then(data => console.log(data))
+```
+
+### getSteamStoreMetaData
+Returns current steam market data for the tf2 page, including featured items and filters for each class
+
+Parameters:
+* language - (optional) language to return results in
+```
+tf2SteamApi.getSteamStoreMetaData()
+.then(data => console.log(data))
+```
+
+### getStoreStatus
+Returns TF2 store status. Call is currently undocumented. Status response code meanings are unkwown.
+
+Parameters: None
+```
+tf2SteamApi.getStoreStatus()
+.then(data => console.log(data))
+```
+
+### getAssetPrices
+Returns full list of purchasable items and their individual class ids and properties
+
+Parameters:
+* currency - (optional) currency type to format price of return items in
+* language - (optional) language to return item results in
+```
+tf2.getAssetPrices()
+.then(data => console.log(data))
+```
+
+### getAssetClassInfo
+Returns individual item info by class id from the class_id_list array provided. To get class ids, use getAssetPrices()
+
+Parameters:
+* language - (optional) language to return item results in
+* class_count - number of items requested
+* class_id_list - (Array object) array of item class ids to return details for
+```
+const requestedClasses = 2
+const classesList = [195151, 211447708]
+tf2SteamApi.getAssetClassInfo(null, requestedClasses, classesList)
+```
