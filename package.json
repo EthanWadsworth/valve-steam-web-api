@@ -1,14 +1,30 @@
 {
-  "name": "dota2-steam-api-backend",
+  "name": "valve-steam-web-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wrapper for Valve online multiplayer game web apis",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/env-cmd -f ./config/dev.config mocha --timeout 10000 ./src/test/dotaApi.test ./src/test/tf2Api.test"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "dota2",
+    "team fortress 2",
+    "tf2",
+    "steam",
+    "valve",
+    "web",
+    "api"
+  ],
+  "author": "Ethan Wadsworth",
   "license": "ISC",
+  "homepage": "https://github.com/EthanWadsworth/valve-steam-web-api/#readme",
+  "bugs": {
+    "url": "https://github.com/EthanWadsworth/valve-steam-web-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/valve-steam-web-api.git"
+  },
   "dependencies": {
     "node-fetch": "^2.6.1"
   },
