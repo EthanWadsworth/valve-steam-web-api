@@ -1,0 +1,674 @@
+{
+    "achievementpercentages": {
+        "achievements": [
+            {
+                "name": "GIVE_DAMAGE_LOW",
+                "percent": 66.1999969482421875
+            },
+            {
+                "name": "KILL_ENEMY_RELOADING",
+                "percent": 65.8000030517578125
+            },
+            {
+                "name": "UNSTOPPABLE_FORCE",
+                "percent": 65.5999984741210938
+            },
+            {
+                "name": "KILL_ENEMY_LOW",
+                "percent": 64.3000030517578125
+            },
+            {
+                "name": "WIN_ROUNDS_LOW",
+                "percent": 62.7000007629394531
+            },
+            {
+                "name": "IMMOVABLE_OBJECT",
+                "percent": 61.2000007629394531
+            },
+            {
+                "name": "EARN_MONEY_LOW",
+                "percent": 60.2999992370605469
+            },
+            {
+                "name": "KILL_LOW_DAMAGE",
+                "percent": 60.2000007629394531
+            },
+            {
+                "name": "KILL_SNIPER_WITH_SNIPER",
+                "percent": 59.5999984741210938
+            },
+            {
+                "name": "LOSSLESS_EXTERMINATION",
+                "percent": 57.5
+            },
+            {
+                "name": "KILL_ENEMY_LAST_BULLET",
+                "percent": 55.4000015258789063
+            },
+            {
+                "name": "DAMAGE_NO_KILL",
+                "percent": 54.2999992370605469
+            },
+            {
+                "name": "HEADSHOTS_IN_ROUND",
+                "percent": 52.2000007629394531
+            },
+            {
+                "name": "HIP_SHOT",
+                "percent": 51.9000015258789063
+            },
+            {
+                "name": "FAST_ROUND_WIN",
+                "percent": 51.4000015258789063
+            },
+            {
+                "name": "DOMINATIONS_LOW",
+                "percent": 48.7000007629394531
+            },
+            {
+                "name": "KILLING_SPREE",
+                "percent": 48.5
+            },
+            {
+                "name": "LAST_PLAYER_ALIVE",
+                "percent": 48.2000007629394531
+            },
+            {
+                "name": "WIN_BOMB_PLANT",
+                "percent": 46.5
+            },
+            {
+                "name": "WIN_BOMB_DEFUSE",
+                "percent": 45.9000015258789063
+            },
+            {
+                "name": "KILLS_WITH_MULTIPLE_GUNS",
+                "percent": 45.2999992370605469
+            },
+            {
+                "name": "KILL_ENEMY_TEAM",
+                "percent": 45.2999992370605469
+            },
+            {
+                "name": "KILL_ENEMIES_WHILE_BLIND",
+                "percent": 45
+            },
+            {
+                "name": "REVENGES_LOW",
+                "percent": 44.7000007629394531
+            },
+            {
+                "name": "DOMINATION_OVERKILLS_LOW",
+                "percent": 44.5999984741210938
+            },
+            {
+                "name": "KILL_WHEN_AT_LOW_HEALTH",
+                "percent": 43.2000007629394531
+            },
+            {
+                "name": "KILLING_SPREE_ENDER",
+                "percent": 42
+            },
+            {
+                "name": "AVENGE_FRIEND",
+                "percent": 40.9000015258789063
+            },
+            {
+                "name": "KILL_ENEMY_IN_AIR",
+                "percent": 40.7999992370605469
+            },
+            {
+                "name": "GIVE_DAMAGE_MED",
+                "percent": 39.7000007629394531
+            },
+            {
+                "name": "KILL_BOMB_PICKUP",
+                "percent": 39.2000007629394531
+            },
+            {
+                "name": "WIN_PISTOLROUNDS_LOW",
+                "percent": 37.7999992370605469
+            },
+            {
+                "name": "KILL_TWO_WITH_ONE_SHOT",
+                "percent": 37.5999984741210938
+            },
+            {
+                "name": "WIN_KNIFE_FIGHTS_LOW",
+                "percent": 36
+            },
+            {
+                "name": "KILL_ENEMY_MED",
+                "percent": 35.2999992370605469
+            },
+            {
+                "name": "KILL_WITH_OWN_GUN",
+                "percent": 35.2000007629394531
+            },
+            {
+                "name": "FLAWLESS_VICTORY",
+                "percent": 35
+            },
+            {
+                "name": "STILL_ALIVE",
+                "percent": 33.2999992370605469
+            },
+            {
+                "name": "WIN_ROUNDS_MED",
+                "percent": 33.2999992370605469
+            },
+            {
+                "name": "HEADSHOTS",
+                "percent": 33
+            },
+            {
+                "name": "BOMB_PLANT_IN_25_SECONDS",
+                "percent": 31.7000007629394531
+            },
+            {
+                "name": "DOMINATIONS_HIGH",
+                "percent": 31.2999992370605469
+            },
+            {
+                "name": "KILL_WHILE_IN_AIR",
+                "percent": 31.2000007629394531
+            },
+            {
+                "name": "KILL_BOMB_DEFUSER",
+                "percent": 29.6000003814697266
+            },
+            {
+                "name": "CONCURRENT_DOMINATIONS",
+                "percent": 28.6000003814697266
+            },
+            {
+                "name": "KILL_SNIPERS",
+                "percent": 28.5
+            },
+            {
+                "name": "EXTENDED_DOMINATION",
+                "percent": 28.2000007629394531
+            },
+            {
+                "name": "WIN_BOMB_PLANT_AFTER_RECOVERY",
+                "percent": 28.1000003814697266
+            },
+            {
+                "name": "BORN_READY",
+                "percent": 28
+            },
+            {
+                "name": "BASE_SCAMPER",
+                "percent": 28
+            },
+            {
+                "name": "WIN_MAP_DE_DUST2",
+                "percent": 26.5
+            },
+            {
+                "name": "PISTOL_ROUND_KNIFE_KILL",
+                "percent": 26.2999992370605469
+            },
+            {
+                "name": "WIN_PISTOLROUNDS_MED",
+                "percent": 25.2999992370605469
+            },
+            {
+                "name": "EARN_MONEY_MED",
+                "percent": 25.1000003814697266
+            },
+            {
+                "name": "BLOODLESS_VICTORY",
+                "percent": 25
+            },
+            {
+                "name": "WIN_GUN_GAME_ROUNDS_LOW",
+                "percent": 24.7999992370605469
+            },
+            {
+                "name": "KILL_SNIPER_WITH_KNIFE",
+                "percent": 24
+            },
+            {
+                "name": "KILLS_ENEMY_WEAPON",
+                "percent": 23.5
+            },
+            {
+                "name": "KILL_ENEMY_BLINDED",
+                "percent": 22.7999992370605469
+            },
+            {
+                "name": "GUN_GAME_FIRST_KILL",
+                "percent": 22.7000007629394531
+            },
+            {
+                "name": "GUN_GAME_KILL_KNIFER",
+                "percent": 22.6000003814697266
+            },
+            {
+                "name": "WIN_MAP_DE_LAKE",
+                "percent": 22.3999996185302734
+            },
+            {
+                "name": "DONATE_WEAPONS",
+                "percent": 21.7000007629394531
+            },
+            {
+                "name": "DEFUSE_DEFENSE",
+                "percent": 21.6000003814697266
+            },
+            {
+                "name": "KILL_ENEMY_P250",
+                "percent": 21.3999996185302734
+            },
+            {
+                "name": "KILL_ENEMY_HKP2000",
+                "percent": 21.3999996185302734
+            },
+            {
+                "name": "WIN_DUAL_DUEL",
+                "percent": 19.3999996185302734
+            },
+            {
+                "name": "BOMB_DEFUSE_CLOSE_CALL",
+                "percent": 19.3999996185302734
+            },
+            {
+                "name": "KILL_ENEMY_SG556",
+                "percent": 19
+            },
+            {
+                "name": "BOMB_PLANT_LOW",
+                "percent": 18.7999992370605469
+            },
+            {
+                "name": "KILL_ENEMY_AWP",
+                "percent": 18.7000007629394531
+            },
+            {
+                "name": "KILL_ENEMY_GLOCK",
+                "percent": 18.5
+            },
+            {
+                "name": "KILL_WITH_EVERY_WEAPON",
+                "percent": 18.2999992370605469
+            },
+            {
+                "name": "KILL_ENEMIES_WHILE_BLIND_HARD",
+                "percent": 18.2000007629394531
+            },
+            {
+                "name": "REVENGES_HIGH",
+                "percent": 18.2000007629394531
+            },
+            {
+                "name": "KILL_ENEMY_FIVESEVEN",
+                "percent": 18.2000007629394531
+            },
+            {
+                "name": "SILENT_WIN",
+                "percent": 18
+            },
+            {
+                "name": "WIN_MAP_DE_INFERNO",
+                "percent": 18
+            },
+            {
+                "name": "KILL_HOSTAGE_RESCUER",
+                "percent": 18
+            },
+            {
+                "name": "KILL_ENEMY_DEAGLE",
+                "percent": 17
+            },
+            {
+                "name": "SURVIVE_GRENADE",
+                "percent": 16.8999996185302734
+            },
+            {
+                "name": "KILL_ENEMY_ELITE",
+                "percent": 16.5
+            },
+            {
+                "name": "KILL_ENEMY_SSG08",
+                "percent": 16
+            },
+            {
+                "name": "ONE_SHOT_ONE_KILL",
+                "percent": 15.6999998092651367
+            },
+            {
+                "name": "DOMINATION_OVERKILLS_MATCH",
+                "percent": 15.3999996185302734
+            },
+            {
+                "name": "DEAD_GRENADE_KILL",
+                "percent": 15.3999996185302734
+            },
+            {
+                "name": "KILL_ENEMY_AK47",
+                "percent": 14.8999996185302734
+            },
+            {
+                "name": "GIVE_DAMAGE_HIGH",
+                "percent": 14
+            },
+            {
+                "name": "KILL_ENEMY_FAMAS",
+                "percent": 13.8999996185302734
+            },
+            {
+                "name": "WIN_MAP_AR_SHOOTS",
+                "percent": 13.5
+            },
+            {
+                "name": "GUN_GAME_ROUNDS_LOW",
+                "percent": 13.1999998092651367
+            },
+            {
+                "name": "KILL_ENEMY_KNIFE",
+                "percent": 12.8000001907348633
+            },
+            {
+                "name": "KILL_ENEMY_M4A1",
+                "percent": 12.8000001907348633
+            },
+            {
+                "name": "WIN_MAP_DE_BANK",
+                "percent": 12.6999998092651367
+            },
+            {
+                "name": "KILL_ENEMY_MAG7",
+                "percent": 12.3000001907348633
+            },
+            {
+                "name": "KILL_ENEMY_SCAR20",
+                "percent": 12.3000001907348633
+            },
+            {
+                "name": "WIN_PISTOLROUNDS_HIGH",
+                "percent": 12.1000003814697266
+            },
+            {
+                "name": "KILL_ENEMY_MP9",
+                "percent": 11.8000001907348633
+            },
+            {
+                "name": "KILLER_AND_ENEMY_IN_AIR",
+                "percent": 11.8000001907348633
+            },
+            {
+                "name": "KILL_ENEMY_AUG",
+                "percent": 11.6000003814697266
+            },
+            {
+                "name": "KILL_ENEMY_HIGH",
+                "percent": 11.5
+            },
+            {
+                "name": "KILL_ENEMY_MAC10",
+                "percent": 11.3999996185302734
+            },
+            {
+                "name": "KILL_ENEMY_TEC9",
+                "percent": 11.1000003814697266
+            },
+            {
+                "name": "KILL_ENEMY_G3SG1",
+                "percent": 11.1000003814697266
+            },
+            {
+                "name": "DOMINATION_OVERKILLS_HIGH",
+                "percent": 11
+            },
+            {
+                "name": "KILL_ENEMY_NEGEV",
+                "percent": 10.6999998092651367
+            },
+            {
+                "name": "GUN_GAME_CONSERVATIONIST",
+                "percent": 10.6999998092651367
+            },
+            {
+                "name": "WIN_ROUNDS_WITHOUT_BUYING",
+                "percent": 10.6999998092651367
+            },
+            {
+                "name": "MEDALIST",
+                "percent": 10.3999996185302734
+            },
+            {
+                "name": "WIN_MAP_DE_STMARC",
+                "percent": 10.3999996185302734
+            },
+            {
+                "name": "WIN_ROUNDS_HIGH",
+                "percent": 10.3000001907348633
+            },
+            {
+                "name": "CAUSE_FRIENDLY_FIRE_WITH_FLASHBANG",
+                "percent": 10.1000003814697266
+            },
+            {
+                "name": "KILL_ENEMY_SAWEDOFF",
+                "percent": 10
+            },
+            {
+                "name": "WIN_MAP_DE_SAFEHOUSE",
+                "percent": 10
+            },
+            {
+                "name": "KILL_ENEMY_TASER",
+                "percent": 9.80000019073486328
+            },
+            {
+                "name": "BOMB_DEFUSE_LOW",
+                "percent": 9.69999980926513672
+            },
+            {
+                "name": "KILL_ENEMY_MP7",
+                "percent": 9.60000038146972656
+            },
+            {
+                "name": "GUN_GAME_KNIFE_KILL_KNIFER",
+                "percent": 9.60000038146972656
+            },
+            {
+                "name": "KILL_ENEMY_NOVA",
+                "percent": 9.39999961853027344
+            },
+            {
+                "name": "META_PISTOL",
+                "percent": 9
+            },
+            {
+                "name": "GUN_GAME_SMG_KILL_KNIFER",
+                "percent": 8.89999961853027344
+            },
+            {
+                "name": "KILL_ENEMY_UMP45",
+                "percent": 8.89999961853027344
+            },
+            {
+                "name": "WIN_MAP_DE_NUKE",
+                "percent": 8.80000019073486328
+            },
+            {
+                "name": "KILL_ENEMY_P90",
+                "percent": 8.60000038146972656
+            },
+            {
+                "name": "KILL_ENEMY_GALILAR",
+                "percent": 8.5
+            },
+            {
+                "name": "GOOSE_CHASE",
+                "percent": 8.30000019073486328
+            },
+            {
+                "name": "WIN_MAP_DE_SUGARCANE",
+                "percent": 8.10000038146972656
+            },
+            {
+                "name": "WIN_MAP_DE_TRAIN",
+                "percent": 8
+            },
+            {
+                "name": "TR_BOMB_PLANT_LOW",
+                "percent": 7.30000019073486328
+            },
+            {
+                "name": "WIN_MAP_AR_BAGGAGE",
+                "percent": 6.90000009536743164
+            },
+            {
+                "name": "KILL_ENEMY_M249",
+                "percent": 6.90000009536743164
+            },
+            {
+                "name": "RESCUE_ALL_HOSTAGES",
+                "percent": 6.90000009536743164
+            },
+            {
+                "name": "KILL_ENEMY_XM1014",
+                "percent": 6.69999980926513672
+            },
+            {
+                "name": "WIN_KNIFE_FIGHTS_HIGH",
+                "percent": 6.5
+            },
+            {
+                "name": "EARN_MONEY_HIGH",
+                "percent": 6.5
+            },
+            {
+                "name": "KILL_ENEMY_BIZON",
+                "percent": 6.19999980926513672
+            },
+            {
+                "name": "WIN_MAP_CS_OFFICE",
+                "percent": 5.80000019073486328
+            },
+            {
+                "name": "META_SHOTGUN",
+                "percent": 5.59999990463256836
+            },
+            {
+                "name": "META_RIFLE",
+                "percent": 5.59999990463256836
+            },
+            {
+                "name": "WIN_MAP_DE_SHORTTRAIN",
+                "percent": 5.5
+            },
+            {
+                "name": "SURVIVE_MANY_ATTACKS",
+                "percent": 5.5
+            },
+            {
+                "name": "KILL_ENEMY_HEGRENADE",
+                "percent": 5.40000009536743164
+            },
+            {
+                "name": "FAST_HOSTAGE_RESCUE",
+                "percent": 5.09999990463256836
+            },
+            {
+                "name": "META_SMG",
+                "percent": 4.90000009536743164
+            },
+            {
+                "name": "PLAY_EVERY_GUNGAME_MAP",
+                "percent": 4.40000009536743164
+            },
+            {
+                "name": "GUN_GAME_TARGET_SECURED",
+                "percent": 4.30000019073486328
+            },
+            {
+                "name": "GUN_GAME_FIRST_THING_FIRST",
+                "percent": 4.30000019073486328
+            },
+            {
+                "name": "WIN_GUN_GAME_ROUNDS_MED",
+                "percent": 4.30000019073486328
+            },
+            {
+                "name": "KILL_ENEMY_MOLOTOV",
+                "percent": 3.90000009536743164
+            },
+            {
+                "name": "GUN_GAME_ROUNDS_MED",
+                "percent": 3.90000009536743164
+            },
+            {
+                "name": "TR_BOMB_DEFUSE_LOW",
+                "percent": 3.90000009536743164
+            },
+            {
+                "name": "KILLED_DEFUSER_WITH_GRENADE",
+                "percent": 3.79999995231628418
+            },
+            {
+                "name": "GRENADE_MULTIKILL",
+                "percent": 3.70000004768371582
+            },
+            {
+                "name": "BREAK_WINDOWS",
+                "percent": 3.29999995231628418
+            },
+            {
+                "name": "WIN_MAP_CS_ITALY",
+                "percent": 2.90000009536743164
+            },
+            {
+                "name": "META_WEAPONMASTER",
+                "percent": 2.79999995231628418
+            },
+            {
+                "name": "WIN_MAP_DE_DUST",
+                "percent": 2.70000004768371582
+            },
+            {
+                "name": "WIN_EVERY_GUNGAME_MAP",
+                "percent": 2.59999990463256836
+            },
+            {
+                "name": "WIN_MAP_DE_AZTEC",
+                "percent": 2.40000009536743164
+            },
+            {
+                "name": "BOMB_MULTIKILL",
+                "percent": 2.40000009536743164
+            },
+            {
+                "name": "GUN_GAME_RAMPAGE",
+                "percent": 2.20000004768371582
+            },
+            {
+                "name": "WIN_GUN_GAME_ROUNDS_HIGH",
+                "percent": 2.09999990463256836
+            },
+            {
+                "name": "RESCUE_HOSTAGES_LOW",
+                "percent": 2.09999990463256836
+            },
+            {
+                "name": "RESCUE_HOSTAGES_MED",
+                "percent": 1.89999997615814209
+            },
+            {
+                "name": "WIN_GUN_GAME_ROUNDS_ULTIMATE",
+                "percent": 1.79999995231628418
+            },
+            {
+                "name": "WIN_GUN_GAME_ROUNDS_EXTREME",
+                "percent": 1.79999995231628418
+            },
+            {
+                "name": "GUN_GAME_ROUNDS_HIGH",
+                "percent": 1.79999995231628418
+            }
+        ]
+    }
+}

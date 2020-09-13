@@ -1,0 +1,34 @@
+{
+    "appnews": {
+        "appid": 730,
+        "newsitems": [
+            {
+                "gid": "4249665521682824621",
+                "title": "ENCE coach Twista suspended after CS:GO spectator bug confession",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/The Loadout/4249665521682824621",
+                "is_external_url": true,
+                "author": "editor@theloadout.com",
+                "contents": "<img width=\"900\" height=\"507\" src=\"https://www.theloadout.com/wp-content/uploads/2020/09/ence-twista-suspended-csgo-spectator-bug-900x506.jpg\"/><p>ENCE's Slaava 'Twista' Räsänen has become the latest coach to admit to using the CS:GO spectator bug exploit and has been suspended by his organisation as a result.</p>\n<p>After admitting to his team that he had used the bug to his advantage, ENCE reported Twista to the Esports Integrity Commission, which is <a href=\"https://www.theloadout.com/csgo/esic-spectator-bug-investigation\">investigating historic use of the bug</a> and currently has a confession period open. In <a href=\"https://www.ence.gg/article/ence-suspends-head-coach-slaava-twista-raesaenen\">a statement,</a> ENCE clarifies that Twista has not yet been proven guilty by ESIC, but that it has started an investigation into the coach. While Twista could have stayed on as ENCE's coach, the organisation decided to suspend him anyway in the interest of competitive integrity.</p>\n<p>\"During our consultation, ESIC stated that we are allowed to let Twista act as a coach through the investigation period, but we have decided to suspend him regardless,\" the statement reads. \"While Twista has done a stellar job coaching the team at ENCE and we have no reason to believe he has had any foul play during his time with us, we take competitive integrity very seriously. Suspending him to conclude the investigation was the only course of action we saw to be right.\"</p>\n<p><a href=\"https://www.theloadout.com/csgo/ence-coach-suspended-bug\">Read the rest of the story...</a></p>\n<p>RELATED LINKS:<br />\n<a href=\"https://www.theloadout.com/csgo/cloud9-alex-signing\">Cloud9 signs CS:GO star ALEX in $1.65 million deal</a><br />\n<a href=\"https://www.theloadout.com/csgo/coach-bug-valve-rmr-reset\">CS:GO teams found to have used coach bug will have RMR points reset</a><br />\n<a href=\"https://www.theloadout.com/csgo/rio-major-2020-cancelled\">The Rio CS:GO Major has finally been cancelled</a></p>\n",
+                "feedlabel": "The Loadout",
+                "date": 1599835029,
+                "feedname": "The Loadout",
+                "feed_type": 0,
+                "appid": 730
+            },
+            {
+                "gid": "3819571572130070309",
+                "title": "Cloud9 signs CS:GO star ALEX in $1.65 million deal",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/The Loadout/3819571572130070309",
+                "is_external_url": true,
+                "author": "editor@theloadout.com",
+                "contents": "<img width=\"900\" height=\"507\" src=\"https://www.theloadout.com/wp-content/uploads/2020/09/alex-cloud9-csgo-900x506.jpg\"/><p>As part of its mass restructuring of its CS:GO team, Cloud9 has added former Team Vitality rifler Alex 'ALEX' McMeekin as its new in-game leader.</p>\n<p>ALEX becomes the second signing of <a href=\"https://www.theloadout.com/teams/cloud9/csgo-gm-henryg\">new general manager Henry 'HenryG' Greer</a> after the former CS:GO caster brought in Aleksandar 'Kassad' Trifunovic as head coach. In levels of transparency rarely seen in the esports industry, HenryG openly revealed some of the details of ALEX's signing, confirming the Brit has penned a three year deal worth $1.65 million. This comes after HenryG promised to be as open as possible about Cloud9's business in forming its new team.</p>\n<p>While ALEX officially departed Vitality less than 24 hours ago, he has not played for the organisation for over six months after <a href=\"https://www.theloadout.com/teams/team-vitality/alex-csgo-leaving-rumours\">stepping down from the main roster,</a> citing burnout and exhaustion over Vitality's packed travel schedule. By joining Cloud9, ALEX will now be part of an organisation with a less strenuous schedule as the only tournament organiser it is partnered with is Flashpoint.</p>\n<p><a href=\"https://www.theloadout.com/csgo/cloud9-alex-signing\">Read the rest of the story...</a></p>\n<p>RELATED LINKS:<br />\n<a href=\"https://www.theloadout.com/csgo/ence-coach-suspended-bug\">ENCE coach Twista suspended after CS:GO spectator bug confession</a><br />\n<a href=\"https://www.theloadout.com/csgo/coach-bug-valve-rmr-reset\">CS:GO teams found to have used coach bug will have RMR points reset</a><br />\n<a href=\"https://www.theloadout.com/csgo/rio-major-2020-cancelled\">The Rio CS:GO Major has finally been cancelled</a></p>\n",
+                "feedlabel": "The Loadout",
+                "date": 1599757932,
+                "feedname": "The Loadout",
+                "feed_type": 0,
+                "appid": 730
+            }
+        ],
+        "count": 918
+    }
+}

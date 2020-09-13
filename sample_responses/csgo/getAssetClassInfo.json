@@ -1,0 +1,64 @@
+{
+    "result": {
+        "3946324333": {
+            "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXX7gNTPcUxuxpJSXPbQv2S1MDeXkh6LBBOiejzZQQx1aCcIT9DtNjkxIXTz_HyNrmJwm4FscF3jLzC9oqm3AO2_xVlNT3tZNjCZ26v-os",
+            "icon_url_large": "",
+            "icon_drag_url": "",
+            "name": "Fracture Case Key",
+            "market_hash_name": "Fracture Case Key",
+            "market_name": "Fracture Case Key",
+            "name_color": "D2D2D2",
+            "background_color": "",
+            "type": "Base Grade Key",
+            "tradable": "1",
+            "marketable": "1",
+            "commodity": "1",
+            "market_tradable_restriction": "7",
+            "fraudwarnings": "",
+            "descriptions": {
+                "0": {
+                    "type": "html",
+                    "value": "This key only opens Fracture cases",
+                    "app_data": ""
+                },
+                "1": {
+                    "type": "html",
+                    "value": " ",
+                    "app_data": ""
+                },
+                "2": {
+                    "type": "html",
+                    "value": "",
+                    "color": "00a000",
+                    "app_data": {
+                        "limited": "1"
+                    }
+                }
+            },
+            "owner_descriptions": "",
+            "tags": {
+                "0": {
+                    "internal_name": "CSGO_Tool_WeaponCase_KeyTag",
+                    "name": "Key",
+                    "category": "Type",
+                    "category_name": "Type"
+                },
+                "1": {
+                    "internal_name": "normal",
+                    "name": "Normal",
+                    "category": "Quality",
+                    "category_name": "Category"
+                },
+                "2": {
+                    "internal_name": "Rarity_Common",
+                    "name": "Base Grade",
+                    "category": "Rarity",
+                    "color": "b0c3d9",
+                    "category_name": "Quality"
+                }
+            },
+            "classid": "3946324333"
+        },
+        "success": true
+    }
+}
