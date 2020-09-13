@@ -1,6 +1,6 @@
 {
   "name": "valve-steam-web-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Wrapper for Valve online multiplayer game web apis",
   "main": "index.js",
   "scripts": {
