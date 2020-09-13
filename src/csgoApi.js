@@ -193,7 +193,7 @@ class csgoApi {
      * @param {string} language (optional)
      * @param {number} appid (uint32)
      */
-    getAssetPrices(currency, language, appid="440") {
+    getAssetPrices(currency, language, appid="730") {
         const query_params = {
             key: this.key,
             currency,
