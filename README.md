@@ -1,4 +1,4 @@
-# dota2-steam-api-backend
+# valve-steam-web-api
 JS Wrapper for the Steam Web Api for all Valve online multiplayer games (Dota2 TF2 CS:GO - support coming)
 
 Official Documentation provided by Steam can be found here - https://wiki.teamfortress.com/wiki/WebAPI
