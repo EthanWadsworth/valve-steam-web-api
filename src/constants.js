@@ -13,6 +13,9 @@ const TF2_STORE_ECON = "IEconItems_" + TF2_APPID + '/'
 
 const STEAM_ECONOMY = "ISteamEconomy/"
 
+const CSGO_APPID = "730"
+const CSGO_STORE_ECON = "IEconItems_" + CSGO_APPID + '/'
+
 module.exports = {
     BASE_URL,
     DOTA_ECON,
@@ -22,5 +25,6 @@ module.exports = {
     DOTA_STORE_ECON,
     STEAM_USER_STATS,
     TF2_STORE_ECON,
-    STEAM_ECONOMY
+    STEAM_ECONOMY,
+    CSGO_STORE_ECON
 }
