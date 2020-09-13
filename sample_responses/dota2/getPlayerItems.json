@@ -1,0 +1,71 @@
+{
+    "result": {
+        "status": 1,
+        "num_backpack_slots": 10000,
+        "items": [
+            {
+                "id": 1161089538,
+                "original_id": 1161089538,
+                "defindex": 5041,
+                "level": 1,
+                "quality": 4,
+                "inventory": 2147483750,
+                "quantity": 1,
+                "flag_cannot_trade": true,
+                "flag_cannot_craft": true,
+                "attributes": [
+                    {
+                        "defindex": 153,
+                        "value": 1065353216,
+                        "float_value": 1
+                    },
+                    {
+                        "defindex": 415,
+                        "value": 1,
+                        "float_value": 0
+                    }
+                ]
+            },
+            {
+                "id": 1188453995,
+                "original_id": 1188453995,
+                "defindex": 5107,
+                "level": 1,
+                "quality": 4,
+                "inventory": 2147483651,
+                "quantity": 1,
+                "equipped": [
+                    {
+                        "class": 2,
+                        "slot": 3
+                    }
+                ]
+            },
+            {
+                "id": 1280467314,
+                "original_id": 1280250221,
+                "defindex": 5217,
+                "level": 1,
+                "quality": 4,
+                "inventory": 2147483731,
+                "quantity": 1,
+                "equipped": [
+                    {
+                        "class": 23,
+                        "slot": 7
+                    }
+                ]
+            },
+            {
+                "id": 1280467351,
+                "original_id": 1280338016,
+                "defindex": 20001,
+                "level": 1,
+                "quality": 4,
+                "inventory": 2147483744,
+                "quantity": 1,
+                "flag_cannot_craft": true
+            }
+        ]
+    }
+}

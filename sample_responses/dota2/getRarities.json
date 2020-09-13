@@ -1,0 +1,56 @@
+{
+    "result": {
+        "count": 9,
+        "rarities": [
+            {
+                "name": "common",
+                "id": 1,
+                "order": 0,
+                "color": "#b0c3d9"
+            },
+            {
+                "name": "uncommon",
+                "id": 2,
+                "order": 1,
+                "color": "#5e98d9"
+            },
+            {
+                "name": "rare",
+                "id": 3,
+                "order": 2,
+                "color": "#4b69ff"
+            },
+            {
+                "name": "mythical",
+                "id": 4,
+                "order": 3,
+                "color": "#8847ff"
+            },
+            {
+                "name": "legendary",
+                "id": 5,
+                "order": 4,
+                "color": "#d32ce6"
+            },
+            {
+                "name": "ancient",
+                "id": 6,
+                "order": 5,
+                "color": "#EB4B4B"
+            },
+            {
+                "name": "immortal",
+                "id": 7,
+                "order": 6,
+                "color": "#e4ae39"
+            },
+            {
+                "name": "arcana",
+                "id": 8,
+                "order": 7,
+                "color": "#ADE55C"
+            }
+        ],
+        "status": 200
+    }
+}

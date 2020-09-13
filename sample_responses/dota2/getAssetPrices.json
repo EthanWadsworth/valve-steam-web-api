@@ -1,0 +1,113 @@
+{
+    "result": {
+        "success": true,
+        "assets": [
+            {
+                "prices": {
+                    "USD": 0,
+                    "GBP": 0,
+                    "EUR": 0,
+                    "RUB": 0,
+                    "BRL": 0,
+                    "RMB": 0,
+                    "JPY": 0,
+                    "NOK": 0,
+                    "IDR": 0,
+                    "MYR": 0,
+                    "PHP": 0,
+                    "SGD": 0,
+                    "THB": 0,
+                    "VND": 0,
+                    "KRW": 0,
+                    "TRY": 0,
+                    "UAH": 0,
+                    "MXN": 0,
+                    "CAD": 0,
+                    "AUD": 0,
+                    "NZD": 0,
+                    "PLN": 0,
+                    "CHF": 0,
+                    "AED": 0,
+                    "CLP": 0,
+                    "CNY": 0,
+                    "COP": 0,
+                    "PEN": 0,
+                    "SAR": 0,
+                    "TWD": 0,
+                    "HKD": 0,
+                    "ZAR": 0,
+                    "INR": 0,
+                    "ARS": 0,
+                    "CRC": 0,
+                    "ILS": 0,
+                    "KWD": 0,
+                    "QAR": 0,
+                    "UYU": 0,
+                    "KZT": 0
+                },
+                "name": "4004",
+                "date": "1/13/2014",
+                "class": [
+                    {
+                        "name": "def_index",
+                        "value": "4004"
+                    }
+                ],
+                "classid": "57939754"
+            },
+            {
+                "prices": {
+                    "USD": 0,
+                    "GBP": 0,
+                    "EUR": 0,
+                    "RUB": 0,
+                    "BRL": 0,
+                    "RMB": 0,
+                    "JPY": 0,
+                    "NOK": 0,
+                    "IDR": 0,
+                    "MYR": 0,
+                    "PHP": 0,
+                    "SGD": 0,
+                    "THB": 0,
+                    "VND": 0,
+                    "KRW": 0,
+                    "TRY": 0,
+                    "UAH": 0,
+                    "MXN": 0,
+                    "CAD": 0,
+                    "AUD": 0,
+                    "NZD": 0,
+                    "PLN": 0,
+                    "CHF": 0,
+                    "AED": 0,
+                    "CLP": 0,
+                    "CNY": 0,
+                    "COP": 0,
+                    "PEN": 0,
+                    "SAR": 0,
+                    "TWD": 0,
+                    "HKD": 0,
+                    "ZAR": 0,
+                    "INR": 0,
+                    "ARS": 0,
+                    "CRC": 0,
+                    "ILS": 0,
+                    "KWD": 0,
+                    "QAR": 0,
+                    "UYU": 0,
+                    "KZT": 0
+                },
+                "name": "4008",
+                "date": "1/13/2014",
+                "class": [
+                    {
+                        "name": "def_index",
+                        "value": "4008"
+                    }
+                ],
+                "classid": "57939594"
+            }
+        ]
+    }
+}

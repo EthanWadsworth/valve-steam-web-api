@@ -1,0 +1,39 @@
+{
+    "appnews": {
+        "appid": 570,
+        "newsitems": [
+            {
+                "gid": "3819571008270063476",
+                "title": "Dota 2 gets a Windranger Arcana, with new model, second style, effects, more",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/3819571008270063476",
+                "is_external_url": true,
+                "author": "editor@pcgamesn.com",
+                "contents": "<img width=\"900\" height=\"507\" src=\"https://www.pcgamesn.com/wp-content/uploads/2020/09/dota-2-windranger-arcana-splash-900x506.jpg\"/><p>Hot on the heels of Valve's update on when the <a href=\"https://www.pcgamesn.com/dota-2/the-international-stockholm-2021\">Dota 2 Pro Circuit will resume</a>, the developer's now revealed the latest batch of goodies for the <a href=\"https://www.pcgamesn.com/which-best-moba\">MOBA game</a>. It's a shiny new Arcana bundle for Lyralei, the Windranger, which features a completely new hero model, items, and loadout pedestal, as well as custom animations and effects, VO, and more to reflect her mystical new style.</p>\n<p>\"Not even Lyralei herself understood the true extent of her connection with the guardian wind,\" the bundle's <a href=\"https://blog.dota2.com/2020/09/compass-of-the-rising-gale-windranger-arcana/\">description</a> goes. \"With no knowledge of her forebears, or memory of her first days, she could but listen for the truth in the whispers of sun-dappled trees around her, or the howling storms that keep even daylight at bay. But as she grew, and her strange connection with the guardian wind became ever stronger, an unease about her origins began to take hold.\"</p>\n<p>Windranger's new pack is all about unleashing this power of the guardian wind. Her new character model, items, pedestal, and special new animations and effects reflect this, giving the hero a glowing blue aura and ambient swirling breeze that surrounds her. She also gets new death effects for both her and enemy heroes she's taken out.</p>\n<p><a href=\"https://www.pcgamesn.com/dota-2/windranger-arcana-compass-of-the-rising-gale\">Read the rest of the story...</a></p>\n<p>RELATED LINKS:<br />\n<a href=\"https://www.pcgamesn.com/dota-2/the-international-stockholm-2021\">The Dota 2 Pro Circuit will \"likely\" resume in early 2021</a><br />\n<a href=\"https://www.pcgamesn.com/dota-2/app-League-of-Legends\">This Dota 2 and League of Legends app translates between the two MOBAs</a><br />\n<a href=\"https://www.pcgamesn.com/dota/best-dota-2-heroes-beginners\">The best Dota 2 heroes for beginners</a></p>\n",
+                "feedlabel": "PCGamesN",
+                "date": 1599472853,
+                "feedname": "PCGamesN",
+                "feed_type": 0,
+                "appid": 570
+            },
+            {
+                "gid": "3819571008260532017",
+                "title": "Compass of the Rising Gale — Windranger Arcana",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/3819571008260532017",
+                "is_external_url": true,
+                "author": "simonne",
+                "contents": "[url=http://www.dota2.com/risinggale][img]http://cdn.dota2.com/apps/dota2/images/blogfiles/wr_blog_image.png[/img][/url]\n\nNot even Lyralei herself understood the true extent of her connection with the guardian wind. With no knowledge of her forebears, or memory of her first days, she could but listen for the truth in the whispers of sun-dappled trees around her, or the howling storms that keep even daylight at bay. But as she grew, and her strange connection with the guardian wind became ever stronger, an unease about her origins began to take hold. Unleash the power of the wind with the all-new Compass of the Rising Gale Arcana bundle, available now in The International 10 Battle Pass.\n\nThis Arcana bundle includes a new model and base items, new animations, a custom channel bar and Focus Fire damage counter, ambient wind effects for both styles, additions to base and Immortal effects for her abilities, new death effects for both Windranger and enemy heroes she takes down, and over 500 new Arcana-exclusive voice lines. Rack up damage on targets you kill using Focus Fire to unlock the Reflections of the Gale alternate style. \n\nLearn more at the [url=http://www.dota2.com/risinggale]Compass of the Rising Gale[/url] update page.",
+                "feedlabel": "Community Announcements",
+                "date": 1599244960,
+                "feedname": "steam_community_announcements",
+                "feed_type": 1,
+                "appid": 570,
+                "tags": [
+                    "mod_reviewed",
+                    "ModAct_487266167_1599272033_0",
+                    "mod_require_rereview"
+                ]
+            }
+        ],
+        "count": 2285
+    }
+}
