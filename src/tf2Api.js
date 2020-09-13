@@ -3,7 +3,7 @@ const {responseHandler, handleQueryParams} = require('./utils')
 const {BASE_URL, STEAM_USER_STATS, TF2_STORE_ECON, STEAM_ECONOMY} = require('./constants')
 
 /**
- * Wrapper class for the steam web api specically for Dota 2
+ * Wrapper class for the steam web api specically for TF2
  */
 class Tf2Api {
     /**
