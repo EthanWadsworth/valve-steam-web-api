@@ -4,7 +4,7 @@
   "description": "Wrapper for Valve online multiplayer game web apis",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/env-cmd -f ./config/dev.config mocha --timeout 10000 ./src/test/dotaApi.test ./src/test/tf2Api.test"
+    "test": "./node_modules/.bin/env-cmd -f ./config/dev.config mocha --timeout 10000 ./src/test/dotaApi.test ./src/test/tf2Api.test ./src/test/csgoApi.test"
   },
   "keywords": [
     "dota2",

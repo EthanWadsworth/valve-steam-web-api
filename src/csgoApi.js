@@ -16,9 +16,9 @@ class csgoApi {
 
     /**
      * Retrieves CSGO maps and their respective playtimes over the given interval
-     * @param {string} interval (optional)
-     * @param {string} gamemode (optional)
-     * @param {string} mapgroup (optional)
+     * @param {string} interval 
+     * @param {string} gamemode 
+     * @param {string} mapgroup
      */
     getGameMapsPlaytime(interval, gamemode, mapgroup) {
         const query_params = {
