@@ -1,0 +1,34 @@
+{
+    "appnews": {
+        "appid": 440,
+        "newsitems": [
+            {
+                "gid": "3819571572126482485",
+                "title": "Lockdown Throwdown 2",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/tf2_blog/3819571572126482485",
+                "is_external_url": true,
+                "author": "",
+                "contents": "<a href=\"https://www.twitch.tv/kritzkast\"><img src=\"https://steamcdn-a.akamaihd.net/steam/news/75361/lockdown.jpg?t=1496190900\"></a>\n(Image credit - <a href=\"https://twitter.com/chickenbruhger\">Chicken Burger</a>, <a href=\"https://twitter.com/punishedgreene\">Dan Greene</a>, <a href=\"https://twitter.com/lieber_sheila\">Sheila Lieber</a>)<br><br>\n\n<p>You’re invited to <a href=\"https://www.toornament.com/en_US/tournaments/3860652609657503744/information\">Lockdown Throwdown 2</a>, a 6v6 Cup managed by <a href=\"https://phoenixred.eu/\">Phoenix Red</a>. The prize pool, provided by mannco.store and KritzKast, has been raised to 300 keys!</p><br> \n\n<p>You can catch the event live on <a href=\"https://www.twitch.tv/kritzkast\">KritzKast’s Twitch channel</a>. This two-day cup starts Saturday, September 12th, at 16:25 CEST | 09:25 Central and concludes on Sunday, September 13th, at the same time.</p><br>\n\n<p>Be sure to subscribe to the <a href=\"https://www.youtube.com/kritzkast\">YouTube channel</a> to watch the VODs later!</p><br>\n",
+                "feedlabel": "TF2 Blog",
+                "date": 1599666840,
+                "feedname": "tf2_blog",
+                "feed_type": 0,
+                "appid": 440
+            },
+            {
+                "gid": "3819571008263034954",
+                "title": "Team Fortress 2 now has anti-cheat bots",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/PCGamesN/3819571008263034954",
+                "is_external_url": true,
+                "author": "editor@pcgamesn.com",
+                "contents": "<img width=\"900\" height=\"507\" src=\"https://www.pcgamesn.com/wp-content/uploads/2019/03/team-fortress-2-best-steam-games-header-900x506.jpg\"/><p>Tired of waiting around for an official solution to cheaters, the community for <a href=\"https://www.pcgamesn.com/team-fortress-2\">Team Fortress 2</a> has taken matters into their own hands. Anti-cheating bots have been created to police the <a href=\"https://www.pcgamesn.com/15-best-pc-first-person-shooters\">FPS game</a>, working against any players that enter a round and break the rules.</p>\n<p>The \"cheater teminators\", as they've been <a href=\"https://twitter.com/googleygareth/status/1301599497852784642?s=21\">dubbed on Twitter</a>, are bots that enter any given match of the multiplayer game to target anyone whose behaviour seems strange. Known in-game as Bot Extermination Services, they're AI programmed with cheating powers, drawn to any other players that use the same untoward abilities, and start killing them. A crude system, sure, but modern problems require modern solutions.</p>\n<p>Where these bots originate from appears unknown - one <a href=\"https://www.reddit.com/r/Games/comments/imf5bi/the_tf2_community_has_created_bots_that_will_not/\">Reddit user</a> speculates they're from LmaoBox, a Team Fortress 2 cheats seller protecting its investment by making sure there isn't a mass exodus due to too many cheaters. Selling cheats, then anonymously supplying the anti-cheat protection, would be a very clever, deeply capitalist, massively gross business model. As it stands, players in the community seem glad they exist all the same, with floods of memes about the game becoming a war of bots against bots.</p>\n<p><a href=\"https://www.pcgamesn.com/team-fortress-2/bots-anti-cheat\">Read the rest of the story...</a></p>\n<p>RELATED LINKS:<br />\n<a href=\"https://www.pcgamesn.com/team-fortress-2/mod-classic\">Remember Team Fortress 2 in 2008? It's back, in mod form</a><br />\n<a href=\"https://www.pcgamesn.com/team-fortress-2/update-voice\">Team Fortress 2 update restricts voice messaging, makes it easier to mute and report players</a><br />\n<a href=\"https://www.pcgamesn.com/team-fortress-2/racist-bots\">Team Fortress 2's racist bot problem is finally getting Valve's attention</a></p>\n",
+                "feedlabel": "PCGamesN",
+                "date": 1599304799,
+                "feedname": "PCGamesN",
+                "feed_type": 0,
+                "appid": 440
+            }
+        ],
+        "count": 2947
+    }
+}

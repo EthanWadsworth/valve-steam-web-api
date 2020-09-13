@@ -1,0 +1,207 @@
+{
+    "result": {
+        "success": true,
+        "assets": [
+            {
+                "prices": {
+                    "USD": 1299,
+                    "GBP": 1049,
+                    "EUR": 1150,
+                    "RUB": 89900,
+                    "BRL": 6799,
+                    "JPY": 140000,
+                    "NOK": 12500,
+                    "IDR": 18499900,
+                    "MYR": 5700,
+                    "PHP": 65000,
+                    "SGD": 1799,
+                    "THB": 40500,
+                    "VND": 30700000,
+                    "KRW": 1570000,
+                    "TRY": 8995,
+                    "UAH": 35500,
+                    "MXN": 29500,
+                    "CAD": 1829,
+                    "AUD": 1895,
+                    "NZD": 1999,
+                    "PLN": 5099,
+                    "CHF": 1275,
+                    "CNY": 9200,
+                    "TWD": 39000,
+                    "HKD": 9900,
+                    "INR": 97500,
+                    "AED": 4800,
+                    "SAR": 4995,
+                    "ZAR": 22500,
+                    "COP": 4850000,
+                    "PEN": 4600,
+                    "CLP": 1065000,
+                    "ARS": 87999,
+                    "CRC": 735000,
+                    "ILS": 4595,
+                    "KWD": 395,
+                    "QAR": 4749,
+                    "UYU": 55500,
+                    "KZT": 520000
+                },
+                "name": "30186",
+                "date": "2013/10/09",
+                "class": [
+                    {
+                        "name": "def_index",
+                        "value": "30186"
+                    }
+                ],
+                "classid": "211447708",
+                "tags": [
+                    "Cosmetics"
+                ],
+                "tag_ids": [
+                    2526276177
+                ]
+            },
+            {
+                "prices": {
+                    "USD": 499,
+                    "GBP": 399,
+                    "EUR": 445,
+                    "RUB": 34500,
+                    "BRL": 2639,
+                    "JPY": 53000,
+                    "NOK": 4800,
+                    "IDR": 7099900,
+                    "MYR": 2200,
+                    "PHP": 25000,
+                    "SGD": 699,
+                    "THB": 15500,
+                    "VND": 11800000,
+                    "KRW": 605000,
+                    "TRY": 3495,
+                    "UAH": 13600,
+                    "MXN": 11300,
+                    "CAD": 699,
+                    "AUD": 725,
+                    "NZD": 769,
+                    "PLN": 1969,
+                    "CHF": 485,
+                    "CNY": 3600,
+                    "TWD": 15000,
+                    "HKD": 3800,
+                    "INR": 37500,
+                    "AED": 1900,
+                    "SAR": 1895,
+                    "ZAR": 8700,
+                    "COP": 1870000,
+                    "PEN": 1770,
+                    "CLP": 410000,
+                    "ARS": 33799,
+                    "CRC": 285000,
+                    "ILS": 1775,
+                    "KWD": 150,
+                    "QAR": 1799,
+                    "UYU": 21500,
+                    "KZT": 200000
+                },
+                "name": "341",
+                "date": "2010/12/20",
+                "class": [
+                    {
+                        "name": "def_index",
+                        "value": "341"
+                    }
+                ],
+                "classid": "195151",
+                "tags": [
+                    "Cosmetics"
+                ],
+                "tag_ids": [
+                    2526276177
+                ]
+            },
+            {
+                "prices": {
+                    "USD": 749,
+                    "GBP": 599,
+                    "EUR": 665,
+                    "RUB": 51900,
+                    "BRL": 3949,
+                    "JPY": 79500,
+                    "NOK": 7200,
+                    "IDR": 10649900,
+                    "MYR": 3300,
+                    "PHP": 37500,
+                    "SGD": 1049,
+                    "THB": 23400,
+                    "VND": 17700000,
+                    "KRW": 905000,
+                    "TRY": 5195,
+                    "UAH": 20500,
+                    "MXN": 16900,
+                    "CAD": 1049,
+                    "AUD": 1095,
+                    "NZD": 1149,
+                    "PLN": 2959,
+                    "CHF": 735,
+                    "CNY": 5300,
+                    "TWD": 22500,
+                    "HKD": 5800,
+                    "INR": 56500,
+                    "AED": 2800,
+                    "SAR": 2795,
+                    "ZAR": 13000,
+                    "COP": 2800000,
+                    "PEN": 2650,
+                    "CLP": 615000,
+                    "ARS": 50499,
+                    "CRC": 425000,
+                    "ILS": 2650,
+                    "KWD": 225,
+                    "QAR": 2749,
+                    "UYU": 31900,
+                    "KZT": 300000
+                },
+                "name": "610",
+                "date": "2011/09/07",
+                "class": [
+                    {
+                        "name": "def_index",
+                        "value": "610"
+                    }
+                ],
+                "classid": "9240401",
+                "tags": [
+                    "Cosmetics"
+                ],
+                "tag_ids": [
+                    2526276177
+                ]
+            }
+        ],
+        "tags": {
+            "Cosmetics": "#Store_Cosmetics",
+            "Tools": "#Store_Tools",
+            "Weapons": "#Store_Weapons",
+            "Taunts": "#Store_Taunts",
+            "Class_Bundles": "#Store_Class_Bundles",
+            "Bundles": "#Store_Bundles",
+            "Limited": "#Store_Limited",
+            "Highlighted": "#Store_Highlighted",
+            "Maps": "#Store_Maps",
+            "New": "#Store_New",
+            "Halloween": "#Store_Halloween"
+        },
+        "tag_ids": {
+            "0": 2526276177,
+            "1": 3942309495,
+            "2": 1376697313,
+            "3": 433363577,
+            "4": 500325732,
+            "5": 3634838168,
+            "6": 3634386471,
+            "7": 548292821,
+            "8": 1194199205,
+            "9": 1810056261,
+            "10": 1069931592
+        }
+    }
+}

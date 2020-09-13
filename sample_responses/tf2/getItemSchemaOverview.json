@@ -1,0 +1,328 @@
+{
+	"result": {
+		"status": 1,
+		"items_game_url": "http://media.steampowered.com/apps/440/scripts/items/items_game.0552d2eea0c340747f058aea3519155e1f3c5730.txt",
+		"qualities": {
+			"Normal": 0,
+			"rarity1": 1,
+			"rarity2": 2,
+			"vintage": 3,
+			"rarity3": 4,
+			"rarity4": 5,
+			"Unique": 6,
+			"community": 7,
+			"developer": 8,
+			"selfmade": 9,
+			"customized": 10,
+			"strange": 11,
+			"completed": 12,
+			"haunted": 13,
+			"collectors": 14,
+			"paintkitweapon": 15
+		},
+		"originNames": [
+			{
+				"origin": 0,
+				"name": "Timed Drop"
+			},
+			{
+				"origin": 1,
+				"name": "Achievement"
+			},
+			{
+				"origin": 2,
+				"name": "Purchased"
+			},
+			{
+				"origin": 3,
+				"name": "Traded"
+			},
+			{
+				"origin": 4,
+				"name": "Crafted"
+			},
+			{
+				"origin": 5,
+				"name": "Store Promotion"
+			},
+			{
+				"origin": 6,
+				"name": "Gifted"
+			},
+			{
+				"origin": 7,
+				"name": "Support Granted"
+			},
+			{
+				"origin": 8,
+				"name": "Found in Crate"
+			},
+			{
+				"origin": 9,
+				"name": "Earned"
+			},
+			{
+				"origin": 10,
+				"name": "Third-Party Promotion"
+			},
+			{
+				"origin": 11,
+				"name": "Wrapped Gift"
+			},
+			{
+				"origin": 12,
+				"name": "Halloween Drop"
+			},
+			{
+				"origin": 13,
+				"name": "Steam Purchase"
+			},
+			{
+				"origin": 14,
+				"name": "Foreign Item"
+			},
+			{
+				"origin": 15,
+				"name": "CD Key"
+			},
+			{
+				"origin": 16,
+				"name": "Collection Reward"
+			},
+			{
+				"origin": 17,
+				"name": "Preview Item"
+			},
+			{
+				"origin": 18,
+				"name": "Steam Workshop Contribution"
+			},
+			{
+				"origin": 19,
+				"name": "Periodic score reward"
+			},
+			{
+				"origin": 20,
+				"name": "MvM Badge completion reward"
+			},
+			{
+				"origin": 21,
+				"name": "MvM Squad surplus reward"
+			},
+			{
+				"origin": 22,
+				"name": "Recipe output"
+			},
+			{
+				"origin": 23,
+				"name": "Quest Drop"
+			},
+			{
+				"origin": 24,
+				"name": "Quest Loaner Item"
+			},
+			{
+				"origin": 25,
+				"name": "Trade-Up"
+			},
+			{
+				"origin": 26,
+				"name": "Viral Competitive Beta Pass Spread"
+			},
+			{
+				"origin": 27,
+				"name": "CYOA Blood Money Purchase"
+			},
+			{
+				"origin": 28,
+				"name": "War Paint"
+			},
+			{
+				"origin": 29,
+				"name": "Untradable Free Contract Reward"
+			}
+		],
+		"attributes": [
+			{
+				"name": "damage penalty",
+				"defindex": 1,
+				"attribute_class": "mult_dmg",
+				"description_string": "#Attrib_DamageDone_Negative",
+				"description_format": "value_is_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "damage bonus",
+				"defindex": 2,
+				"attribute_class": "mult_dmg",
+				"description_string": "#Attrib_DamageDone_Positive",
+				"description_format": "value_is_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "clip size penalty",
+				"defindex": 3,
+				"attribute_class": "mult_clipsize",
+				"description_string": "#Attrib_ClipSize_Negative",
+				"description_format": "value_is_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "clip size bonus",
+				"defindex": 4,
+				"attribute_class": "mult_clipsize",
+				"description_string": "#Attrib_ClipSize_Positive",
+				"description_format": "value_is_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "fire rate penalty",
+				"defindex": 5,
+				"attribute_class": "mult_postfiredelay",
+				"description_string": "#Attrib_FireRate_Negative",
+				"description_format": "value_is_inverted_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "fire rate bonus",
+				"defindex": 6,
+				"attribute_class": "mult_postfiredelay",
+				"description_string": "#Attrib_FireRate_Positive",
+				"description_format": "value_is_inverted_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "heal rate penalty",
+				"defindex": 7,
+				"attribute_class": "mult_medigun_healrate",
+				"description_string": "#Attrib_HealRate_Negative",
+				"description_format": "value_is_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "heal rate bonus",
+				"defindex": 8,
+				"attribute_class": "mult_medigun_healrate",
+				"description_string": "#Attrib_HealRate_Positive",
+				"description_format": "value_is_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "ubercharge rate penalty",
+				"defindex": 9,
+				"attribute_class": "mult_medigun_uberchargerate",
+				"description_string": "#Attrib_UberchargeRate_Negative",
+				"description_format": "value_is_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "ubercharge rate bonus",
+				"defindex": 10,
+				"attribute_class": "mult_medigun_uberchargerate",
+				"description_string": "#Attrib_UberchargeRate_Positive",
+				"description_format": "value_is_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "overheal bonus",
+				"defindex": 11,
+				"attribute_class": "mult_medigun_overheal_amount",
+				"description_string": "#Attrib_OverhealAmount_Positive",
+				"description_format": "value_is_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "overheal decay penalty",
+				"defindex": 12,
+				"attribute_class": "mult_medigun_overheal_decay",
+				"description_string": "#Attrib_OverhealDecay_Negative",
+				"description_format": "value_is_inverted_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "overheal decay bonus",
+				"defindex": 13,
+				"attribute_class": "mult_medigun_overheal_decay",
+				"description_string": "#Attrib_OverhealDecay_Positive",
+				"description_format": "value_is_inverted_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "overheal decay disabled",
+				"defindex": 14,
+				"attribute_class": "mult_medigun_overheal_decay",
+				"description_string": "#Attrib_OverhealDecay_Disabled",
+				"description_format": "value_is_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "crit mod disabled",
+				"defindex": 15,
+				"attribute_class": "mult_crit_chance",
+				"description_string": "#Attrib_CritChance_Disabled",
+				"description_format": "value_is_percentage",
+				"effect_type": "negative",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "heal on hit for rapidfire",
+				"defindex": 16,
+				"attribute_class": "add_onhit_addhealth",
+				"description_string": "#Attrib_HealOnHit_Positive",
+				"description_format": "value_is_additive",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "add uber charge on hit",
+				"defindex": 17,
+				"attribute_class": "add_onhit_ubercharge",
+				"description_string": "#Attrib_AddUber_OnHit_Positive",
+				"description_format": "value_is_additive_percentage",
+				"effect_type": "positive",
+				"hidden": false,
+				"stored_as_integer": false
+			},
+			{
+				"name": "medigun charge is crit boost",
+				"defindex": 18,
+				"attribute_class": "set_charge_type",
+				"description_string": "#Attrib_Medigun_CritBoost",
+				"description_format": "value_is_additive",
+				"effect_type": "neutral",
+				"hidden": false,
+				"stored_as_integer": false
+            }
+        ]
+	}
+}
