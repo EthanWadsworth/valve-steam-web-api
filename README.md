@@ -9,29 +9,39 @@ First, get a developer api key for access to the steam web api here - https://st
 
 To install the package, type the following into your terminal/shell:
 ```
-npm install valve_steam_api
+npm install valve-steam-web-api
 ```
 The module contains two usable classes, one for Dota 2 and one for TF2. The classes can be accessed in the following ways:
 
 For Dota 2:
 ```
-const valveSteamApi = require('valve_steam_api')
+const valveSteamApi = require('valve-steam-web-api')
 const dotaSteamApi = new valveSteamApi.dotaSteamApi('<yourSteamApiKey>')
 ```
 or
 ```
-let {dotaSteamApi} = require('valve_steam_api')
+let {dotaSteamApi} = require('valve-steam-web-api')
 dotaSteamApi = new dotaSteamApi('<yourSteamApiKey>')
 ```
 For TF2:
 ```
-const valveSteamApi = require('valve_steam_api')
+const valveSteamApi = require('valve-steam-web-api')
 const tf2SteamApi = new valveSteamApi.tf2SteamApi('<yourSteamApiKey>')
 ```
 or
 ```
-let {tf2SteamApi} = require('valve_steam_api')
+let {tf2SteamApi} = require('valve-steam-web-api')
 tf2SteamApi = new tf2SteamApi('<yourSteamApiKey>')
+```
+For CSGO:
+```
+const valveSteamApi = require('valve-steam-web-api')
+const csgoSteamApi = new valveSteamApi.csgoSteamApi('<yourSteamApiKey>')
+```
+or
+```
+let {csgoSteamApi} = require('valve-steam-web-api')
+csgoSteamApi = new csgoSteamApi('<yourSteamApiKey>')
 ```
 ## Dota2 Response Methods
 All methods except those that return img urls will return a Promise that can be handled
@@ -557,4 +567,146 @@ Parameters:
 const requestedClasses = 2
 const classesList = [195151, 211447708]
 tf2SteamApi.getAssetClassInfo(null, requestedClasses, classesList)
+```
+
+## CSGO Response Methods
+All methods return promises that can be handled
+### getGameMapsPlaytime
+Retrieves CSGO maps and their respective playtimes over the given interval
+
+Parameters:
+* interval - What recent interval is requested, possible values: day, week, month
+* gamemode - What game mode is requested, possible values: competitive, casual
+* mapgroup - What maps are requested, possible values: operation
+```
+const testInterval = 'day'
+const testGamemode = 'competitive'
+const testGroup = 'operation'
+csgoSteamApi.getGameMapsPlaytime(testInterval, testGamemode, testGroup)
+.then(data => console.log(data))
+```
+
+### getGameServersStatus
+Return data on the current status of the CSGO servers
+
+Parameters: None
+```
+csgoSteamApi.getGameServersStatus()
+.then(data => console.log(data))
+```
+
+### getSchema
+Describes ingame weapon properties and details and how CS:GO classifies ingame activities and features
+
+Parameters:
+* language - (optional) language to return results in
+```
+csgoSteamApi.getSchema()
+.then(data => console.log(data))
+```
+
+### getSchemaURL
+Returns url to ingame item schema file
+
+Parameters: None
+```
+csgoSteamApi.getSchemaURL()
+.then(data => console.log(data))
+```
+
+### getStoreMetaData
+Retrieves metadata on how the steam market filters CS:GO ingame items such as cosmetics
+
+Parameters:
+* language - (optional) language to return results in
+```
+csgoSteamApi.getStoreMetaData()
+.then(data => console.log(data))
+```
+
+### getServerVersion
+Retrieves information about CSGO ingame servers
+
+Parameters: None
+```
+csgoSteamApi.getServerVersion()
+.then(data => console.log(data))
+```
+
+### getNewsForCSGOApp
+Get recent news for CSGO by the filterable parameters
+
+Parameters:
+* maxlength - (optional) 	Maximum length for the content to return, 0 for full content, if it's less then a blurb is generated to fit
+* enddate - (optional) Retrieve posts earlier than this date (unix epoch timestamp)
+* count - (optional) # of posts to retrieve (default 20)
+* feeds - (optional) Comma-separated list of feed names to return news for
+```
+const testCount = 10
+csgoSteamApi.getNewsForCSGOApp(null, null, testCount)
+.then(data => console.log(data))
+```
+
+### getGlobalAchievementPercentagesForCSGO
+Return list of ingame achievements and the percentage of the global playerbase that has earned each one
+
+Parameters: None
+```
+csgoSteamApi.getGlobalAchievementPercentagesForCSGO()
+.then(data => console.log(data))
+```
+
+### getCSGOPlayerAchievements
+Returns list of earned achievements for the steam user passed in
+
+Parameters:
+* steamid - uint64 steam id
+* language - (optional) language to return results in
+```
+csgoSteamApi.getCSGOPlayerAchievements('<uint64_steamid>')
+.then(data => console.log(data))
+```
+
+### getSchemaForCSGO
+Returns game name, version, and list of ingame stats tracked
+
+Parameters:
+* language - (optional) language to return results in
+```
+csgoSteamApi.getSchemaForCSGO()
+.then(data => console.log(data))
+```
+
+### getNumberOfCurrentPlayers
+Returns number of current ingame players
+
+Parameters: None
+```
+csgoSteamApi.getNumberOfCurrentPlayers()
+.then(data => console.log(data))
+```
+
+### getAssetPrices
+Returns full list of purchasable items and their individual class ids and properties
+
+Parameters:
+* currency - (optional) currency type to format price of return items in
+* language - (optional) language to return item results in
+```
+csgoSteamApi.getAssetPrices()
+.then(data => console.log(data))
+```
+
+### getAssetClassInfo
+Returns individual item info by class id from the class_id_list array provided. To get class ids, use getAssetPrices()
+
+Parameters:
+* language - (optional) language to return item results in
+* class_count - number of items requested
+* class_id_list - (Array object) array of item class ids to return details for
+```
+const requestedClasses = 2
+const classesList = [3761545710, 3946324333]
+csgoSteamApi.getAssetClassInfo(null, requestedClasses, classesList)
+.then(data => console.log(data))
 ```
