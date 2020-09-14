@@ -4,6 +4,8 @@ JS Wrapper for the Steam Web Api for all Valve online multiplayer games (Dota2 T
 Official Documentation provided by Steam can be found here - https://wiki.teamfortress.com/wiki/WebAPI
 
 The documentation for other endpoints not officially documented in the above link can be found here - https://steamapi.xpaw.me
+
+For sample response JSON data: https://github.com/EthanWadsworth/valve-steam-web-api/tree/master/sample_responses
 ## Installation and Setup
 First, get a developer api key for access to the steam web api here - https://steamcommunity.com/dev/
 
